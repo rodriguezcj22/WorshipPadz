@@ -163,10 +163,11 @@ class CollectionViewController: UICollectionViewController {
     
     
 //STOP button
-    private let myButton: PausePlayBtn = {
+    private let myButton: StopBtn = {
+        
                 // y - moves the button up and down
         //let button = PausePlayBtn(frame: CGRect(x: 108, y: 600, width: 200, height: 60)) //BTN POSITIONING
-        let button = PausePlayBtn(frame: CGRect(x: 108, y: 590, width: 200, height: 80)) //BTN POSITIONING
+        let button = StopBtn(frame: CGRect(x: 108, y: 590, width: 200, height: 80)) //BTN POSITIONING
             // x has to be the width / 2 , or something like that
         //button.backgroundColor = .blue
         button.setBackgroundImage(#imageLiteral(resourceName: "stopbutton"), for: .normal)
@@ -180,7 +181,10 @@ class CollectionViewController: UICollectionViewController {
 
 //BUTTON ACTION !!!!!!!!!!!!!!!! THAT HAPPENS WHEN YOU TAP THE BUTTON !!
     @objc func buttonAction(sender: UIButton!) {
-     print("Button tapped")
+        print("Button tapped")
+        
+        //function created outside is being called here when the button is tapped
+        deselectCell()
         
         //when the button is tapped, change background color to .red
         //myButton.backgroundColor = .red
@@ -188,6 +192,10 @@ class CollectionViewController: UICollectionViewController {
         // A way to stop all the pads with the button, but there has to be a better way
         
         if Cpad.isPlaying || Csharp.isPlaying || Dpad.isPlaying || Dsharp.isPlaying || Epad.isPlaying || Fpad.isPlaying || Fsharp.isPlaying || Gpad.isPlaying || Gsharp.isPlaying || Apad.isPlaying || Asharp.isPlaying || Bpad.isPlaying {
+            
+                //DESELECT THE CURRENT CELL
+                print("Deselect the current note")
+            
                 //Cpad.stop()
                 Cpad.setVolume(0, fadeDuration: 2.8)
                         //and then stop it ! because otherwise it is taking memory resources by runnig at 0 volum
@@ -223,11 +231,26 @@ class CollectionViewController: UICollectionViewController {
             print("default action")
         } */
 
+        
+
+        
+        
+        
+        
     } // ACTION BUTTON ENDS
 
     
+    func deselectCell() {
+        //print("DESELECT THE CELL")
 
-
+        //tableView.deselectRow(at: tableView.indexPathForSelectedRow!, animated: true)
+        
+        let currentCell = collectionView.indexPathsForSelectedItems
+        
+        print("The current cell to be deselected is: \(currentCell)")
+    }
+    
+    
     
     //4/27
     var slider: UISlider!
@@ -330,6 +353,8 @@ class CollectionViewController: UICollectionViewController {
         
         cell.noteLabel.textColor = .black //I'M A BEAST BOY !!!!!!
 
+        
+        //change to whtq SEBASTIAN GAVE ME
         //cell.noteLabel.font = UIFont(name: "ArialRoundedMTBold", size: 35)
         cell.noteLabel.font = UIFont(name: "Avenir-Heavy", size: 35)
         
@@ -365,13 +390,10 @@ class CollectionViewController: UICollectionViewController {
     //SELECTING A CELL
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        //1. change background color to the one that you select
         //let selectedCell: UICollectionViewCell = collectionView.cellForItem(at: indexPath)!
               //selectedCell.contentView.backgroundColor = UIColor(red: 102/256, green: 255/256, blue: 255/256, alpha: 0.66)
         
-        //selectedCell
-        
-    
+  
         
         //2. turn on the players
         do {
@@ -421,20 +443,6 @@ class CollectionViewController: UICollectionViewController {
          SEAMLESSLY - with no apparent gaps or spaces between one part and the next
          */
         
-        /*
-         EVAN MURRAY
-            "Have you looked at enveloping functions or crossfading before? Those help a bunch when looping sounds and getting rid of TRANSIENT DECAYS or ATTACKS in the Beginning/end of the sound"
-                - Summary:
-                        - enveloping functions
-                        - crossfading
-                        -transient decays/attacks
-         
-            Carlos: "so you think  this has to do with sound design more than it is a programming problem?"
-         
-            Evan: "I'm not sure. It may be both. Definitely experiment with it. juST LOOP UP ENVELOPING and tutorials on
-         SOUND LOOPING
-         
-         */
 
         
         /*

@@ -10,7 +10,7 @@
 		1E7B43B0260F569400E05DDC /* TestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7B43AE260F569400E05DDC /* TestCollectionViewCell.swift */; };
 		1E7B43B1260F569400E05DDC /* TestCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E7B43AF260F569400E05DDC /* TestCollectionViewCell.xib */; };
 		3E1608192614120D0099B1B8 /* FooterCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1608182614120D0099B1B8 /* FooterCollectionReusableView.swift */; };
-		3E160821261573620099B1B8 /* PausePlayBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E160820261573620099B1B8 /* PausePlayBtn.swift */; };
+		3E160821261573620099B1B8 /* StopBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E160820261573620099B1B8 /* StopBtn.swift */; };
 		3E3F553E25F614FA00E155CF /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3F553D25F614FA00E155CF /* HeaderCollectionReusableView.swift */; };
 		3E3F557325F651E300E155CF /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3F557125F651E300E155CF /* MyCollectionViewCell.swift */; };
 		3E6C762C2638405A00ADE7D2 /* F#.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3E6C76202638405A00ADE7D2 /* F#.wav */; };
@@ -56,7 +56,7 @@
 		1E7B43AE260F569400E05DDC /* TestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionViewCell.swift; sourceTree = "<group>"; };
 		1E7B43AF260F569400E05DDC /* TestCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestCollectionViewCell.xib; sourceTree = "<group>"; };
 		3E1608182614120D0099B1B8 /* FooterCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterCollectionReusableView.swift; sourceTree = "<group>"; };
-		3E160820261573620099B1B8 /* PausePlayBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PausePlayBtn.swift; sourceTree = "<group>"; };
+		3E160820261573620099B1B8 /* StopBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopBtn.swift; sourceTree = "<group>"; };
 		3E3F553D25F614FA00E155CF /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		3E3F557125F651E300E155CF /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		3E6C76202638405A00ADE7D2 /* F#.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "F#.wav"; sourceTree = "<group>"; };
@@ -167,7 +167,7 @@
 				3EA8248E25F34B7B002EEF2B /* LaunchScreen.storyboard */,
 				3E6C761F2638405A00ADE7D2 /* Pads */,
 				3EA8249125F34B7B002EEF2B /* Info.plist */,
-				3E160820261573620099B1B8 /* PausePlayBtn.swift */,
+				3E160820261573620099B1B8 /* StopBtn.swift */,
 			);
 			path = WorshipPads;
 			sourceTree = "<group>";
@@ -338,7 +338,7 @@
 				3EA824BA25F34C66002EEF2B /* CollectionViewController.swift in Sources */,
 				3E3F557325F651E300E155CF /* MyCollectionViewCell.swift in Sources */,
 				3EA8248425F34B7A002EEF2B /* AppDelegate.swift in Sources */,
-				3E160821261573620099B1B8 /* PausePlayBtn.swift in Sources */,
+				3E160821261573620099B1B8 /* StopBtn.swift in Sources */,
 				3E3F553E25F614FA00E155CF /* HeaderCollectionReusableView.swift in Sources */,
 				3EA8248625F34B7A002EEF2B /* SceneDelegate.swift in Sources */,
 			);

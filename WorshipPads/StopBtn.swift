@@ -19,7 +19,7 @@
 
 import UIKit
 
-class PausePlayBtn: UIButton {
+class StopBtn: UIButton {
 
     private let myTitleLabel: UILabel = {
         let label = UILabel()
