@@ -24,31 +24,160 @@ var Asharp = AVAudioPlayer()
 var Bpad = AVAudioPlayer()
 
 //creates a subclass of UICollectionViewController. Child class is "CollectionViewController"
-
+    
 class CollectionViewController: UICollectionViewController {
     
     
-    //BUTTON
+    // Contains data to supply the collectionview
+    let dataSource: [String] = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
+    
+    //Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+
+        
+        
+        
+        //ADVISE: create a new func that will contain the layout code - and call it here in viewdidload
+        
+        let layout = UICollectionViewFlowLayout()
+        
+            layout.scrollDirection = .vertical
+        
+            //Cell Spacing - bottom one [pushes? the footer down]
+            //layout.sectionInset = UIEdgeInsets(top: 15, left: 22, bottom: 110, right: 22)
+                    //padding for cells
+            layout.sectionInset = UIEdgeInsets(top: 15, left: 22, bottom: 187, right: 22)
+            //bottom - lowers the footer
+        
+        
+        //March 30th: resized the cells to fit them into the screen area
+        layout.itemSize = CGSize(width: 100, height: 100)
+        
+
+/* LAYOUT HAS THE HEADER AND FOOTER of the collectionView */
+        //layout.headerReferenceSize = CGSize(width: 20, height: 100)
+        layout.headerReferenceSize = CGSize(width: 20, height: 125)
+        //layout.footerReferenceSize = CGSize(width: 20, height: 125)
+        layout.footerReferenceSize = CGSize(width: 20, height: 55)
+            //line above was missing, and the footer was not visible
+
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+
+        
+        
+        
+        
+  
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        // Register LABEL XIB
+        let nib = UINib(nibName: "TestCollectionViewCell", bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: "testCell")
+        
+        collectionView.register(HeaderCollectionReusableView.self,
+                                 forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.identifier)
+        
+        //footer
+        collectionView.register(FooterCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: FooterCollectionReusableView.identifier)
+
+        //BUTTON
+        //let viewModel = PausePlayBtnViewModel(title: "Stop")
+        //myButton.configure(with: viewModel) //shaped the button
+        
+        collectionView.addSubview(myButton)
+        //myButton.center = view.center
+
+        
+        //ADVISE: ALL THIS CODE GOES INTO THAT NEW FUNCTION
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        //background color for the app
+        
+        //let backgroundColor = UIColor()
+        //collectionView.backgroundColor = .darkGray //#242424
+        
+        let bgColor = #colorLiteral(red: 0.0941, green: 0.0941, blue: 0.0941, alpha: 1) /* #181818 */
+        collectionView.backgroundColor = bgColor
+        
+        /*
+            esta pagina apreto !!!!
+         Swift UIColor Picker
+         https://www.ralfebert.de/ios-examples/uikit/swift-uicolor-picker/
+         
+         */
+        
+  
+        
+        
+        
+        
+        
+        /*
+        //4/27
+        label = UILabel()
+        //draws the frame of the label
+        label.frame = CGRect(x: 0, y: 200, width: self.view.frame.width, height: 150)
+        label.textColor = UIColor.white
+        label.backgroundColor = UIColor.blue
+        label.textAlignment = NSTextAlignment.center
+        label.numberOfLines = 2
+        label.font = UIFont(name: "Copperplate-Bold", size: 32)
+        //self.view.addSubview(label)
+        collectionView.addSubview(label)
+         */
+        
+        
+/* SLIDER - SLIDER - SLIDER - SLIDER - SLIDER - SLIDER - SLIDER - SLIDER - SLIDER */
+        /*
+        slider = UISlider(frame: CGRect(x: 20, y: 680, width: 360, height: 60))
+        slider.minimumValue = 0
+        slider.maximumValue = 100
+        slider.value = 30
+        //slider.backgroundColor = .darkGray
+        slider.tintColor = UIColor.cyan
+        slider.thumbTintColor = UIColor.red
+        slider.isContinuous = true
+        collectionView.addSubview(slider)
+        // -------- */
+        
+        let volumeView = MPVolumeView(frame: CGRect(x: 20, y: 705, width: 360, height: 30))
+        collectionView.addSubview(volumeView)
+        
+        collectionView.clipsToBounds = true
+        view.addSubview(collectionView!)
+        
+    }
+    
+
+    
+    
+//STOP button
     private let myButton: PausePlayBtn = {
                 // y - moves the button up and down
         //let button = PausePlayBtn(frame: CGRect(x: 108, y: 600, width: 200, height: 60)) //BTN POSITIONING
-        let button = PausePlayBtn(frame: CGRect(x: 108, y: 600, width: 200, height: 60)) //BTN POSITIONING
+        let button = PausePlayBtn(frame: CGRect(x: 108, y: 590, width: 200, height: 80)) //BTN POSITIONING
             // x has to be the width / 2 , or something like that
-        button.backgroundColor = .blue
+        //button.backgroundColor = .blue
+        button.setBackgroundImage(#imageLiteral(resourceName: "stopbutton"), for: .normal)
         button.showsTouchWhenHighlighted = true
         //this button = PAUSEPLAYBTN, MY CLASS !!!
-        
-        
         //button.addSubview()
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         //button.configure(with: PausePlayBtnViewModel.init(title: "TEST"))
         return button
     }()
-    
 
-    
-/* ********************************************************************************************************* */
-    
 //BUTTON ACTION !!!!!!!!!!!!!!!! THAT HAPPENS WHEN YOU TAP THE BUTTON !!
     @objc func buttonAction(sender: UIButton!) {
      print("Button tapped")
@@ -93,90 +222,18 @@ class CollectionViewController: UICollectionViewController {
         default:
             print("default action")
         } */
-         
-        
-        
- 
+
     } // ACTION BUTTON ENDS
-/* ********************************************************************************************************* */
-    
-    
+
     
 
 
     
-    // Contains data to supply the collectionview
-    let dataSource: [String] = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
+    //4/27
+    var slider: UISlider!
+    var label: UILabel!
+    //------
     
-    //Lifecycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
-
-
-        
-        
-        //ADVISE: create a new func that will contain the layout code - and call it here in viewdidload
-        
-        let layout = UICollectionViewFlowLayout()
-        
-            layout.scrollDirection = .vertical
-        
-            //Cell Spacing
-            layout.sectionInset = UIEdgeInsets(top: 15, left: 22, bottom: 110, right: 22) //padding for cells
-            //bottom - lowers the footer
-        
-        
-        //March 30th: resized the cells to fit them into the screen area
-        layout.itemSize = CGSize(width: 100, height: 100)
-        
-
-/* LAYOUT HAS THE HEADER AND FOOTER of the collectionView */
-        //layout.headerReferenceSize = CGSize(width: 20, height: 100)
-        layout.headerReferenceSize = CGSize(width: 20, height: 125)
-        layout.footerReferenceSize = CGSize(width: 20, height: 125)
-            //line above was missing, and the footer was not visible
-
-        collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-
-        // Register LABEL XIB
-        let nib = UINib(nibName: "TestCollectionViewCell", bundle: nil)
-        collectionView.register(nib, forCellWithReuseIdentifier: "testCell")
-        
-        collectionView.register(HeaderCollectionReusableView.self,
-                                 forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.identifier)
-        
-        //footer
-        collectionView.register(FooterCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: FooterCollectionReusableView.identifier)
-
-        
-        
-        
-        //BUTTON
-        let viewModel = PausePlayBtnViewModel(title: "Stop")
-        myButton.configure(with: viewModel) //shaped the button
-       
-        
-        
-        
-        collectionView.addSubview(myButton)
-        //myButton.center = view.center
-        
-        
-        
-        
-        
-        //ADVISE: ALL THIS CODE GOES INTO THAT NEW FUNCTION
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.backgroundColor = .yellow // MAIN BACKGROUND COLOR`
-        collectionView.clipsToBounds = true
-        view.addSubview(collectionView!)
-        
-
-        
-    }
     
     
     
@@ -196,46 +253,16 @@ class CollectionViewController: UICollectionViewController {
         return 8
     }
     */
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
 //MARK: Methods
-    
-    
+
     //ADVISE: TEST IF I NEED TO USE IT OR NOT
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         collectionView?.frame = view.bounds
         //collectionView?.backgroundColor = .red
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     /* STAY HERE UNTIL YOU FIGURE OUT HOW TO DISPLAY THE FOOTER !!! */
     //HEADER & FOOTER
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -247,44 +274,39 @@ class CollectionViewController: UICollectionViewController {
             let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: FooterCollectionReusableView.identifier, for: indexPath) as! FooterCollectionReusableView
             footer.configure()
             footer.backgroundColor = .darkGray
+
             return footer
         }
         
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.identifier, for: indexPath) as! HeaderCollectionReusableView
     
         header.configure()
-        header.backgroundColor = .darkGray
+        //header color
+        header.backgroundColor = .black
         return header
     }
-    
-    
-    
-    /*
+
+/*
     //header - reference size
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: view.frame.size.width, height: view.frame.size.width/2)
     }
- */
-    
-    /*
+*/
+/*
     //footer - reference size
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
         return CGSize(width: view.frame.size.width, height: 100)
     }
- */
-    
-    
-    
- 
-    
+*/
+
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dataSource.count
     }
     
     
     //footer
-    
 
+    
     
     
     
@@ -301,7 +323,16 @@ class CollectionViewController: UICollectionViewController {
         cell.setup(with: dataSource[indexPath.row])
         
         //add bg color to cell
-        cell.backgroundColor = .black
+            //this is the one adding that freaking border to my buttons! FU
+        //cell.backgroundColor = .black
+        
+        //cell.backgroundView.image
+        
+        cell.noteLabel.textColor = .black //I'M A BEAST BOY !!!!!!
+
+        //cell.noteLabel.font = UIFont(name: "ArialRoundedMTBold", size: 35)
+        cell.noteLabel.font = UIFont(name: "Avenir-Heavy", size: 35)
+        
         
         return cell
             
@@ -320,41 +351,23 @@ class CollectionViewController: UICollectionViewController {
         //}
         //return cell
     }
-    
-  
-    
+
     
     
-    
-    
-    
+    //this is the one that displays how the cell looks ! aka, background image! ?? 
     /*override */ func collectionView(_ collectionView: UICollectionView, willDisplay cell: MyCollectionViewCell, forItemAt indexPath: IndexPath) {
-        
-        
-        //collectionView.backgroundColor = .red
+
+        collectionView.backgroundColor = .red
             //cell.backgroundColor = .systemPink
         
-        //CollectionViewCell.c
-        
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
     
     //SELECTING A CELL
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         //1. change background color to the one that you select
-        let selectedCell: UICollectionViewCell = collectionView.cellForItem(at: indexPath)!
-              selectedCell.contentView.backgroundColor = UIColor(red: 102/256, green: 255/256, blue: 255/256, alpha: 0.66)
+        //let selectedCell: UICollectionViewCell = collectionView.cellForItem(at: indexPath)!
+              //selectedCell.contentView.backgroundColor = UIColor(red: 102/256, green: 255/256, blue: 255/256, alpha: 0.66)
         
         //selectedCell
         
@@ -393,16 +406,122 @@ class CollectionViewController: UICollectionViewController {
         // console
         print("Selected Note: \(dataSource[indexPath.row])")
         
-        //highlight that dataSurce at indexPath.row)
+
+        /*
+            Controls the looping behavior of the played audio
+         
+         Consider the following libraries:
+            - AVAudioRecorder - And aobject that records audio data to a file
+            - AVMIDIPlayer - an object that plays MIDI data through a system sound module
+                    - the iOS system itself has a SOUND MODULE!
+            
+            - numberOfLoops -> Set a negative integer value to loop the sound continuously until you call the stop method.
+         
+         
+         SEAMLESSLY - with no apparent gaps or spaces between one part and the next
+         */
         
+        /*
+         EVAN MURRAY
+            "Have you looked at enveloping functions or crossfading before? Those help a bunch when looping sounds and getting rid of TRANSIENT DECAYS or ATTACKS in the Beginning/end of the sound"
+                - Summary:
+                        - enveloping functions
+                        - crossfading
+                        -transient decays/attacks
+         
+            Carlos: "so you think  this has to do with sound design more than it is a programming problem?"
+         
+            Evan: "I'm not sure. It may be both. Definitely experiment with it. juST LOOP UP ENVELOPING and tutorials on
+         SOUND LOOPING
+         
+         */
+
+        
+        /*
+         RYAN ROBINSON @RYGROB
+         @AUDIO_SYMMETRIC
+         AUv3 plugin
+         AUv3 host
+         @AudioKitPro - twitter - the leading free & open-source iOS/macOS music & audio dev tools. audiokitpro.com proudly powers millions of iOS app installs
+
+         */
+
         let selection = indexPath.row
         
         // ADVISE: CHANGE TO SWITCH CASE
+
+
+         switch selection {
+             case 0:
+                Cpad.play() //make it fade in slowly
+                
+                /* this is how you make if fade
+                 func setVolume(Float, fadeDuration: TimeInterval)
+                 Changes the audio player’s volume over a duration of time.
+                 
+                 Cpad.setVolume(0.0, 3) //should set volume to zero over a period of 3 seconds to fade out. to fade it do it the other way around (1.0, 3) //go from zero to one (max)? in 3 seconds */
+                
+                
+                Cpad.numberOfLoops = 5 //left it to see the possibilities
+             case 1:
+                Csharp.play()
+                Csharp.numberOfLoops = -1 //will infinite loop until you stop it .
+             case 2:
+                Dpad.play()
+                Dpad.numberOfLoops = 5
+             case 3:
+                Dsharp.play()
+                Dsharp.numberOfLoops = 5
+             case 4:
+                Epad.play()
+                Epad.numberOfLoops = 5
+             case 5:
+                Fpad.play()
+                Fpad.numberOfLoops = 5
+             case 6:
+                Fsharp.play()
+                Fsharp.numberOfLoops = 5
+             case 7:
+                Gpad.play()
+                Gpad.numberOfLoops = 5
+             case 8:
+                Gsharp.play()
+                Gsharp.numberOfLoops = 5
+             case 9:
+                Apad.play()
+                Apad.numberOfLoops = 15
+             case 10:
+                Asharp.play()
+                Asharp.numberOfLoops = 5
+             case 11:
+                Bpad.play()
+                Bpad.numberOfLoops = 5
+             default:
+                print("something went wrong")
+         }
         
+        /*
+         
+         case 0:
+            Cpad.play() //plays from 0.0 because there is fade-in in the audio file
+            
+            do {
+                    if Cpad is playing{
+                    playAtTime= 0.5 seconds
+                    pad.numberOfLoops = -1 //automatically reaches the end, and goes back to 0.5 until the stopbtn is pressed
+            { while (stopButton is not pressed)
+
+         
+         */
+        
+
+        /*
         if selection == 0{
             //FADE IN SLOWLY
             Cpad.play()
             Cpad.numberOfLoops = 5 //left it to see the possibilities
+                //loops but it stops between loops
+                //how do we loop without stopping? solve it 4/9
             //KEEP IT LOOPING
         }else if selection == 1{
             //FADE IN SLOWLY
@@ -440,6 +559,8 @@ class CollectionViewController: UICollectionViewController {
             Bpad.play()
             Bpad.numberOfLoops = 5 
         }
+        */
+ 
     }
     
     // DISELECTING A CELL
@@ -452,9 +573,9 @@ class CollectionViewController: UICollectionViewController {
         
         //1. Change the Cell's background color
         let deselectedCell: UICollectionViewCell = collectionView.cellForItem(at: indexPath)!
-        
         deselectedCell.contentView.backgroundColor = UIColor.clear
         
+
         //2. Fadeout of the music slowly
         //made the app faster
         Cpad.stop()
@@ -469,8 +590,10 @@ class CollectionViewController: UICollectionViewController {
         Apad.stop()
         Asharp.stop()
         Bpad.stop()
-         
     }
+    
+    
+    
 }
 
 
