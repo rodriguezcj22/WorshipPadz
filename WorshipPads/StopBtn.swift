@@ -21,6 +21,7 @@ import UIKit
 
 class StopBtn: UIButton {
 
+    //label for the button
     private let myTitleLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
@@ -84,17 +85,7 @@ class StopBtn: UIButton {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
-        //maybe delete
-        /*
-        myTitleLabel.frame =  CGRect(
-            x: 60,
-            y: 15,
-            width: frame.width-65,
-            height: (frame.height-10)/2
-        ).integral
-        */
-        
+
         myTitleLabel.frame =  CGRect(
             x: 35,
             y: 15,

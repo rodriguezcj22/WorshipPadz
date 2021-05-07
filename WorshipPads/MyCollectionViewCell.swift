@@ -17,6 +17,9 @@ class MyCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
             super.awakeFromNib()
             // Initialization code
+        
+            //observe // execute the function here?
+        
         }
     
     override func layoutSubviews() {
