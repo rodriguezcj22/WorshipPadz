@@ -17,6 +17,9 @@ class MyCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
             super.awakeFromNib()
             // Initialization code
+        
+            //observe // execute the function here?
+        
         }
     
     override func layoutSubviews() {
@@ -27,12 +30,10 @@ class MyCollectionViewCell: UICollectionViewCell {
     func setup(with note: String){
         print(" BUTTON----", btn)
         print(" LABELA ---", labela)
-        btn.setTitle("TEST TITLE", for: .normal)
+        btn.setTitle("TEST TITLE", for: .normal) //the hell is this? delete?
         labela.text = note
-        //notesLabel.text = note
-        //notesPad?.text = note
+        //labela.textColor = .black // 4/26
         print(note)
     }
-    
 }
 
