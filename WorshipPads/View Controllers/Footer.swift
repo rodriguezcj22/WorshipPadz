@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FooterCollectionReusableView: UICollectionReusableView {
+class Footer: UICollectionReusableView {
         
     static let identifier = "FooterCollectionReusableView"
     
