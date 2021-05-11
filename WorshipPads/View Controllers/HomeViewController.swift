@@ -13,8 +13,14 @@ import MediaPlayer
 var padSound = AVAudioPlayer()
 
 
-class HomeViewcontroller: UICollectionViewController {
+class HomeViewController: UICollectionViewController {
     
+    
+    class StopBtnWasPressed {
+        //counter global variable
+        var pressed: Bool?
+    }
+
     
  
 // UI ELEMENTS
@@ -24,6 +30,7 @@ class HomeViewcontroller: UICollectionViewController {
         stopButton.setBackgroundImage(#imageLiteral(resourceName: "stopbutton"), for: .normal)
         stopButton.showsTouchWhenHighlighted = true
         stopButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+
         return stopButton
     }()
  
@@ -33,7 +40,6 @@ class HomeViewcontroller: UICollectionViewController {
     
     var controlCell: Int = 100
     
-
     //Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,9 +49,7 @@ class HomeViewcontroller: UICollectionViewController {
 
         print(" CONTROL CELLL VALUE IN VIEW DID LOAD----", controlCell)
     }
-    
-    
-    
+
     func layoutElementsOnTheScreen() { //fix this whole shit
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -80,11 +84,6 @@ class HomeViewcontroller: UICollectionViewController {
         view.addSubview(collectionView!)
     }
     
-    
-
-
-    
-    //what happens when button is pushed .... delegator?
     @objc func buttonAction(sender: UIButton!) {
         print("Button tapped")
         print(" CONTROL CELL VALUE ON BTN CLICK----", self.controlCell)
@@ -92,12 +91,9 @@ class HomeViewcontroller: UICollectionViewController {
             padSound.setVolume(0, fadeDuration: 3)
         }
         
-    } // ACTION BUTTON ENDS
-    
-
-
-    
-    //MARK: Methods
+        let pressed = StopBtnWasPressed() //struct
+        pressed.pressed = true
+    }
     
     //ADVISE: TEST IF I NEED TO USE IT OR NOT
     override func viewDidLayoutSubviews() {
@@ -131,53 +127,34 @@ class HomeViewcontroller: UICollectionViewController {
         return dataSource.count
     }
     
-    
-    //footer
-    
-    /* -------- THIS IS THE MOST IMPORTANT PART RIGHT NOW OF MY PROJECT -------------- */
+
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         //ADVISE: CHECK HOW GUARD WORKS IN COLLECTIONVIEWCELLS
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "testCell", for: indexPath) as! CollectionViewCell
         
-        //cell.setup(with: "test")
+        //Places the name of the note on the cell. Uses setup() from CVCell
         cell.setup(with: dataSource[indexPath.row])
-        //cell.noteLabel.textColor = .black //I'M A BEAST BOY !!!!!!
+
         cell.noteLabel.font = UIFont(name: "Avenir-Heavy", size: 35)
         return cell
     }
-    
 
     //SELECTING A CELL
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
-         do {
+        //Assigns audio file to padSound variable. Catches any errors.
+        do {
             padSound = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "\(String(dataSource[indexPath.row]))", ofType: "wav")!))
+            //this does not actually play the sound? it just assigns it to padSound
             
-         }catch {
-                     Swift.print(error)
-                 } //Main do-catch ENDS
-                 
-         // prints to console
-         print("Selected Note: \(dataSource[indexPath.row])")
-         
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "testCell", for: indexPath) as! CollectionViewCell
-        
-        if padSound.isPlaying {
-            //print(" CPAD IS PLAYING---STOP IT AND CHANGE CELL UI")
-            //cell.isSelected = false
-            //Cpad.stop()
-        } else {
-            //print(" CPAD IS NOT PLAYING---PLAY THE CORD AND CHANGE UI ")
-            do {
-                padSound = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: (dataSource[indexPath.row]), ofType: "wav")!))
-                padSound.play() //delete?
-            } catch {
-                Swift.print(error)
-            }
-            //cell.isSelected = true
-            //Cpad.play()
+        }catch {
+            Swift.print(error)
         }
+        
+        padSound.play()
+        
+        //Debugs
+        print("Selected Note: \(dataSource[indexPath.row])")
     }
 }
