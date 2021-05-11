@@ -11,30 +11,26 @@ class Header: UICollectionReusableView {
 
     static let identifier = "HeaderCollectionReusableView"
     
-    
-    private let headerLabel: UILabel = {
-        let label1 = UILabel()
-        label1.text = "Worship Pads"
-        label1.font = UIFont(name: label1.font.fontName, size: 60)
-        label1.textAlignment = .center
-        label1.textColor = .white
-        return label1
+    private let headerImageView: UIImageView = {
+        let headerImage = UIImageView()
+        headerImage.image = #imageLiteral(resourceName: "Header")
+        
+        return headerImage
     }()
 
     public func configure(){
-        backgroundColor = .systemGreen
-        
-        addSubview(headerLabel)
+        addSubview(headerImageView)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        headerLabel.frame = bounds //entirity of this view?
+        //headerImageView.frame = bounds
+        headerImageView.frame = CGRect(x: 0,
+                                       y: 10,
+                                       width: 380,
+                                       height: 100)
+        //headerImageView.clipsToBounds = true
     }
-    
-    
-    
-    
     
     //new
     override init(frame: CGRect) {

@@ -18,8 +18,6 @@
          let selectedBackgroundViewImage = UIImageView(frame: bounds)
          selectedBackgroundViewImage.image = #imageLiteral(resourceName: "greenbutton")
          self.selectedBackgroundView = selectedBackgroundViewImage
-         
-         
      }
      
      func deselectCell(sender: UIButton!) {
@@ -49,7 +47,8 @@ class CollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        noteLabel.textColor = .red
+        noteLabel.textColor = .black
+        
         
         defaultAndSelectedBackgroundImages()
         //isSelected = false //not selected -
@@ -95,9 +94,27 @@ class CollectionViewCell: UICollectionViewCell {
         }
     }
 
+    
+    
     func setup(with note: String) {
+        print(" LABELA ---", noteLabel)
         noteLabel.text = note
+        //noteLabel.adjustsFontSizeToFitWidth = true
+
+
     }
+    
+    
+    /*
+    func setup(with note: String){
+        print(" LABELA ---", noteLabel) //eventually delete " LABELA ---"
+        noteLabel.text = note
+        noteLabel.textColor = .white //3/30, is doing what I intend!
+    }
+    */
+    
+    
+    
 }
 
 
