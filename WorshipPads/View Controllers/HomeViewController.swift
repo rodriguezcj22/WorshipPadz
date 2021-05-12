@@ -13,16 +13,9 @@ import MediaPlayer
 var padSound = AVAudioPlayer()
 
 
-class HomeViewController: UICollectionViewController {
+class HomeViewController: UICollectionViewController, CustomCollectionViewDelegate {
     
     
-    class StopBtnWasPressed {
-        //counter global variable
-        var pressed: Bool?
-    }
-
-    
- 
 // UI ELEMENTS
     
     let myButton: StopBtn = {
@@ -30,15 +23,18 @@ class HomeViewController: UICollectionViewController {
         stopButton.setBackgroundImage(#imageLiteral(resourceName: "stopbutton"), for: .normal)
         stopButton.showsTouchWhenHighlighted = true
         stopButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        
+        //stopButton.addTarget(self, action: #selector(), for: .touchUpInside)
 
         return stopButton
     }()
+
  
     
     // Contains data to supply the collectionview
     let dataSource: [String] = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
     
-    var controlCell: Int = 100
+    //var controlCell: Int = 100
     
     //Lifecycle
     override func viewDidLoad() {
@@ -46,10 +42,21 @@ class HomeViewController: UICollectionViewController {
         
         layoutElementsOnTheScreen()
         setupCollectionViewElements()
+        
+        
 
         print(" CONTROL CELLL VALUE IN VIEW DID LOAD----", controlCell)
+        
+
+        
+        
+        
     }
 
+    
+    
+    
+    
     func layoutElementsOnTheScreen() { //fix this whole shit
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -59,6 +66,13 @@ class HomeViewController: UICollectionViewController {
         layout.footerReferenceSize = CGSize(width: 20, height: 55)
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
     }
+    
+    
+    
+    
+    
+    // Contains everything that can happen to the CollectionView
+            //try accesssing the cell and deselecting it here
     
     func setupCollectionViewElements() {
         let nib = UINib(nibName: "CollectionViewCell", bundle: nil)
@@ -84,15 +98,31 @@ class HomeViewController: UICollectionViewController {
         view.addSubview(collectionView!)
     }
     
+    
+    
+    
+    
+    override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        
+        _ = collectionView.dequeueReusableCell(withReuseIdentifier: "testCell", for: indexPath) as! CollectionViewCell
+        
+        //Places the name of the note on the cell. Uses setup() from CVCell
+        //cell.setup(with: dataSource[indexPath.row])
+        //cell.deselectTheCurrentHighlightedCell()
+        
+    }
+    
+    
+    
+    
+    
     @objc func buttonAction(sender: UIButton!) {
         print("Button tapped")
-        print(" CONTROL CELL VALUE ON BTN CLICK----", self.controlCell)
+        //print(" CONTROL CELL VALUE ON BTN CLICK----", self.controlCell)
         if padSound.isPlaying {
             padSound.setVolume(0, fadeDuration: 3)
         }
-        
-        let pressed = StopBtnWasPressed() //struct
-        pressed.pressed = true
+    
     }
     
     //ADVISE: TEST IF I NEED TO USE IT OR NOT
@@ -137,11 +167,47 @@ class HomeViewController: UICollectionViewController {
         cell.setup(with: dataSource[indexPath.row])
 
         cell.noteLabel.font = UIFont(name: "Avenir-Heavy", size: 35)
+        
+        
+        
         return cell
     }
+    
+    
+    /*
+     consider the following delegate pattern
+     
+     class HomeViewController: Togglable {
+            //code
+         }
+     weak var delegate: Toggable?
+     
+     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+             delegate?.toggle(self)
+         }
+     }
+     */
+    
+    
+    
+    
+    
+    
+    
+    
 
     //SELECTING A CELL
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        
+    //delegate code ain't doing shit
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "testCell", for: indexPath) as! CollectionViewCell
+        
+        cell.delegate = self
+    //delegate code can be deleted
+        
+        
 
         //Assigns audio file to padSound variable. Catches any errors.
         do {
@@ -156,5 +222,7 @@ class HomeViewController: UICollectionViewController {
         
         //Debugs
         print("Selected Note: \(dataSource[indexPath.row])")
+        
+        
     }
 }

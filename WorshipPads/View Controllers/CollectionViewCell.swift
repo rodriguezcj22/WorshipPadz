@@ -1,12 +1,15 @@
 import UIKit
 
-class CollectionViewCell: UICollectionViewCell {
+class CollectionViewCell: UICollectionViewCell, Togglable{
+    
+    func toggle() {
+        <#code#>
+    }
+    
 
-    //THIS IS WHERE THE UI FOR THE CELL IS CHANGED
+    public weak var delegate: CustomCollectionViewDelegate?
+
     
-    
-    //@IBOutlet var cellContainerView: UIView!
-    //they are using a UIImageView
     @IBOutlet var noteLabel: UILabel!
 
     override func awakeFromNib() {
@@ -15,17 +18,7 @@ class CollectionViewCell: UICollectionViewCell {
         
         
         defaultAndSelectedBackgroundImages()
-        //isSelected = false //not selected -
-        //this whole ya mean it's running 12 times, 1 time for each cell
         
-    }
-
-    // DID NOT WORK
-    func deselectTheCurrentHighlightedCell() {
-        let defaultCellBackgroundImage = UIImageView(frame: bounds)
-        defaultCellBackgroundImage.image = #imageLiteral(resourceName: "bluebutton")
-        //cellContainerView.addSubview(defaultCellBackgroundImage)
-        self.backgroundView = defaultCellBackgroundImage
     }
     
     // WORKS - UI cell background is set here
