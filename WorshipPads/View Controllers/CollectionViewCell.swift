@@ -2,12 +2,22 @@ import UIKit
 
 class CollectionViewCell: UICollectionViewCell, Togglable{
     
+
+
     func toggle() {
-        <#code#>
+        print("yes it is the fuck accessing everything else")
+        blueCellProperties()
+    }
+    
+    func blueCellProperties(){
+        let blueCell = UIImageView(frame: bounds)
+        blueCell.image = #imageLiteral(resourceName: "bluebutton")
+        self.backgroundView = blueCell
+        print("IT'S EVEN IN HERE!!! ")
     }
     
 
-    public weak var delegate: CustomCollectionViewDelegate?
+    //public weak var delegate: CustomCollectionViewDelegate?
 
     
     @IBOutlet var noteLabel: UILabel!

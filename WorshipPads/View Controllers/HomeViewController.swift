@@ -13,7 +13,7 @@ import MediaPlayer
 var padSound = AVAudioPlayer()
 
 
-class HomeViewController: UICollectionViewController, CustomCollectionViewDelegate {
+class HomeViewController: UICollectionViewController {
     
     
 // UI ELEMENTS
@@ -45,7 +45,7 @@ class HomeViewController: UICollectionViewController, CustomCollectionViewDelega
         
         
 
-        print(" CONTROL CELLL VALUE IN VIEW DID LOAD----", controlCell)
+        //print(" CONTROL CELLL VALUE IN VIEW DID LOAD----", controlCell)
         
 
         
@@ -113,8 +113,9 @@ class HomeViewController: UICollectionViewController, CustomCollectionViewDelega
     }
     
     
-    
-    
+
+    //weak var delegate: Togglable?
+    var delegate = CollectionViewCell() // no longer nil
     
     @objc func buttonAction(sender: UIButton!) {
         print("Button tapped")
@@ -122,7 +123,11 @@ class HomeViewController: UICollectionViewController, CustomCollectionViewDelega
         if padSound.isPlaying {
             padSound.setVolume(0, fadeDuration: 3)
         }
-    
+        
+        //delegate?.toggle()
+        //print(delegate.toggle())
+        delegate.toggle()
+
     }
     
     //ADVISE: TEST IF I NEED TO USE IT OR NOT
@@ -204,10 +209,9 @@ class HomeViewController: UICollectionViewController, CustomCollectionViewDelega
     //delegate code ain't doing shit
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "testCell", for: indexPath) as! CollectionViewCell
         
-        cell.delegate = self
-    //delegate code can be deleted
+        //calling the method from CollectionViewCell because the class was demoted with "as!"
         
-        
+        //cell.toggle()
 
         //Assigns audio file to padSound variable. Catches any errors.
         do {

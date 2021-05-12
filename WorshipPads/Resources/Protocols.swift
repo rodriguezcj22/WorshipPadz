@@ -7,18 +7,11 @@
 
 import Foundation
 
-protocol CustomCollectionViewDelegate: AnyObject {
-    
-    func didTapButton()
-
-}
 
 protocol Togglable: AnyObject {
     //mutating func toggle()
     func toggle()
-    
-    //toggle between default/selected
-    //when the button is pressed, toggle the state to default
+
     
     //As its name suggests, the toggle() method is intended to toggle or invert the state of any conforming type, typically by modifying a property of that type.
     
