@@ -1,37 +1,30 @@
 import UIKit
 
-class CollectionViewCell: UICollectionViewCell, Togglable{
+class CollectionViewCell: UICollectionViewCell{
     
+    
+    @IBOutlet var noteLabel: UILabel!
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        noteLabel?.textColor = .black //should I keep the question mark? it wasn't there before
 
-    func toggle() {
-        print("yes it is the fuck accessing everything else")
-        blueCellProperties()
+        defaultAndSelectedBackgroundImages()
     }
     
+    /*
     func blueCellProperties(){
         let blueCell = UIImageView(frame: bounds)
         blueCell.image = #imageLiteral(resourceName: "bluebutton")
         self.backgroundView = blueCell
         print("IT'S EVEN IN HERE!!! ")
     }
+ */
     
-
     //public weak var delegate: CustomCollectionViewDelegate?
 
-    
-    @IBOutlet var noteLabel: UILabel!
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        noteLabel.textColor = .black
-        
-        
-        defaultAndSelectedBackgroundImages()
-        
-    }
-    
     // WORKS - UI cell background is set here
+    
     func defaultAndSelectedBackgroundImages() {
         let defaultCellBackgroundImage = UIImageView(frame: bounds)
         defaultCellBackgroundImage.image = #imageLiteral(resourceName: "bluebutton")
@@ -44,8 +37,25 @@ class CollectionViewCell: UICollectionViewCell, Togglable{
         //cellContainerView.addSubview(selectedBackgroundImage)
         self.selectedBackgroundView = selectedBackgroundImage
     }
+    
+    /*
+    //delete
+    func defaultBackground(clearBackground: Bool) {
+        
+        if clearBackground == true {
+            print("it reached clearbackground if=true")
+            let defaultCellBackgroundImage = UIImageView(frame: bounds)
+            defaultCellBackgroundImage.image = #imageLiteral(resourceName: "bluebutton")
+            self.backgroundView = defaultCellBackgroundImage
+        }else {
+            print("defaultBackground function is tripping")
+        }
+        
+    }
+    */
 
-
+    
+    /*
     //not working!
     override var isSelected: Bool {
         didSet {
@@ -61,7 +71,7 @@ class CollectionViewCell: UICollectionViewCell, Togglable{
                 self.backgroundView = defaultCellBackgroundImage
             }
         }
-    }
+    } */
 
     
     
@@ -69,9 +79,15 @@ class CollectionViewCell: UICollectionViewCell, Togglable{
         print(" LABELA ---", noteLabel)
         noteLabel.text = note
         //noteLabel.adjustsFontSizeToFitWidth = true
+    }
+}
 
-
+extension CollectionViewCell: Togglable{
+    
+    //what happens when that button is stopped?
+    func didTapStopButton() {
+        print("yes it is the fuck accessing everything else")
+        //blueCellProperties()
     }
     
-
 }

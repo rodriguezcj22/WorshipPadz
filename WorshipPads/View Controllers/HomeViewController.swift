@@ -16,6 +16,8 @@ var padSound = AVAudioPlayer()
 class HomeViewController: UICollectionViewController {
     
     
+    var indexPathTracker: Int?
+    
 // UI ELEMENTS
     
     let myButton: StopBtn = {
@@ -42,20 +44,12 @@ class HomeViewController: UICollectionViewController {
         
         layoutElementsOnTheScreen()
         setupCollectionViewElements()
-        
-        
 
         //print(" CONTROL CELLL VALUE IN VIEW DID LOAD----", controlCell)
-        
-
-        
-        
-        
+ 
     }
 
-    
-    
-    
+
     
     func layoutElementsOnTheScreen() { //fix this whole shit
         let layout = UICollectionViewFlowLayout()
@@ -66,10 +60,6 @@ class HomeViewController: UICollectionViewController {
         layout.footerReferenceSize = CGSize(width: 20, height: 55)
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
     }
-    
-    
-    
-    
     
     // Contains everything that can happen to the CollectionView
             //try accesssing the cell and deselecting it here
@@ -96,39 +86,52 @@ class HomeViewController: UICollectionViewController {
         collectionView.clipsToBounds = true
         //add collectionView to the parent view
         view.addSubview(collectionView!)
+        
+
+        
     }
-    
     
     
     
     
     override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         
-        _ = collectionView.dequeueReusableCell(withReuseIdentifier: "testCell", for: indexPath) as! CollectionViewCell
+        //may need to delete
+         /*for cell in collectionView.visibleCells {
+           if let row = collectionView.indexPath(for: cell)?.item {
+                //assin this index to the global variable
+                // indexPathTracker = cell
+            //if row == collectionView.did
+                print(row)
+           }
+         } */
+         
         
-        //Places the name of the note on the cell. Uses setup() from CVCell
-        //cell.setup(with: dataSource[indexPath.row])
-        //cell.deselectTheCurrentHighlightedCell()
-        
+    
     }
     
     
 
-    //weak var delegate: Togglable?
-    var delegate = CollectionViewCell() // no longer nil
-    
+    //var delegate: Togglable!
+
     @objc func buttonAction(sender: UIButton!) {
         print("Button tapped")
+        
+        let ip = IndexPath(item: indexPathTracker!, section: 0)
+        
+        self.collectionView.deselectItem(at: ip, animated: true)
+        indexPathTracker = nil
+        print(" THIS IS INDEX PATH TRACKER ----", indexPathTracker)
+        
         //print(" CONTROL CELL VALUE ON BTN CLICK----", self.controlCell)
         if padSound.isPlaying {
             padSound.setVolume(0, fadeDuration: 3)
         }
-        
-        //delegate?.toggle()
-        //print(delegate.toggle())
-        delegate.toggle()
-
+  
     }
+    
+    
+    
     
     //ADVISE: TEST IF I NEED TO USE IT OR NOT
     override func viewDidLayoutSubviews() {
@@ -195,8 +198,7 @@ class HomeViewController: UICollectionViewController {
      */
     
     
-    
-    
+
     
     
     
@@ -205,6 +207,7 @@ class HomeViewController: UICollectionViewController {
     //SELECTING A CELL
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        indexPathTracker = indexPath.row
         
     //delegate code ain't doing shit
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "testCell", for: indexPath) as! CollectionViewCell
@@ -230,3 +233,7 @@ class HomeViewController: UICollectionViewController {
         
     }
 }
+
+
+
+
