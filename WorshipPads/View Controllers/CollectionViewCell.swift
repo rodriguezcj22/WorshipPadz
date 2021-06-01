@@ -3,28 +3,24 @@ import UIKit
 class CollectionViewCell: UICollectionViewCell{
     
     
-    @IBOutlet var noteLabel: UILabel!
+    
+    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var noteLabel: UILabel! // problem with this somewhere
+    
+    
+    
+    static let identifier = "CollectionViewCell"
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        noteLabel?.textColor = .black //should I keep the question mark? it wasn't there before
+        noteLabel.textColor = .black //should I keep the question mark? it wasn't there before
 
-        defaultAndSelectedBackgroundImages()
+        //defaultAndSelectedBackgroundImages()
     }
-    
-    /*
-    func blueCellProperties(){
-        let blueCell = UIImageView(frame: bounds)
-        blueCell.image = #imageLiteral(resourceName: "bluebutton")
-        self.backgroundView = blueCell
-        print("IT'S EVEN IN HERE!!! ")
-    }
- */
-    
-    //public weak var delegate: CustomCollectionViewDelegate?
-
+ 
     // WORKS - UI cell background is set here
     
+    /*
     func defaultAndSelectedBackgroundImages() {
         let defaultCellBackgroundImage = UIImageView(frame: bounds)
         defaultCellBackgroundImage.image = #imageLiteral(resourceName: "bluebutton")
@@ -37,57 +33,50 @@ class CollectionViewCell: UICollectionViewCell{
         //cellContainerView.addSubview(selectedBackgroundImage)
         self.selectedBackgroundView = selectedBackgroundImage
     }
+ */
+ 
     
-    /*
-    //delete
-    func defaultBackground(clearBackground: Bool) {
-        
-        if clearBackground == true {
-            print("it reached clearbackground if=true")
-            let defaultCellBackgroundImage = UIImageView(frame: bounds)
-            defaultCellBackgroundImage.image = #imageLiteral(resourceName: "bluebutton")
-            self.backgroundView = defaultCellBackgroundImage
-        }else {
-            print("defaultBackground function is tripping")
-        }
-        
+    
+    //the way it should be done? replace setup?
+    public func configure(with image: UIImage) {
+        imageView.image = #imageLiteral(resourceName: "greenbutton")
     }
-    */
-
-    
-    /*
-    //not working!
-    override var isSelected: Bool {
-        didSet {
-            if(isSelected) {
-               let selectedBackgroundImage = UIImageView(frame: bounds)
-                selectedBackgroundImage.image = #imageLiteral(resourceName: "greenbutton") //change back to green
-                //cellContainerView.addSubview(selectedBackgroundImage)
-                self.selectedBackgroundView = selectedBackgroundImage
-            } else {
-                let defaultCellBackgroundImage = UIImageView(frame: bounds)
-                defaultCellBackgroundImage.image = #imageLiteral(resourceName: "bluebutton")
-                //cellContainerView.addSubview(defaultCellBackgroundImage)
-                self.backgroundView = defaultCellBackgroundImage
-            }
-        }
-    } */
-
-    
-    
+     
     func setup(with note: String) {
-        print(" LABELA ---", noteLabel)
+        //print(" LABELA ---", noteLabel)
         noteLabel.text = note
-        //noteLabel.adjustsFontSizeToFitWidth = true
     }
+    
+    static func nib() -> UINib{
+        return UINib(nibName: "CollectionViewCell", bundle: nil)
+    }
+
 }
 
-extension CollectionViewCell: Togglable{
-    
-    //what happens when that button is stopped?
-    func didTapStopButton() {
-        print("yes it is the fuck accessing everything else")
-        //blueCellProperties()
-    }
-    
-}
+
+
+/*
+ class MyCollectionViewCell: UICollectionViewCell {
+
+     @IBOutlet var imageView: UIImageView!
+     
+     static let identifier = "MyCollectionView"
+     
+     override func awakeFromNib() {
+         super.awakeFromNib()
+         // Initialization code
+     }
+     
+     public func configure(with image: UIImage) {
+         imageView.image = image
+         
+     }
+     
+     static func nib() -> UINib{
+         return UINib(nibName: "MyCollectionViewCell", bundle: nil)
+     }
+ }
+
+ 
+ 
+ */
