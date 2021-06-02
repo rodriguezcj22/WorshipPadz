@@ -9,8 +9,8 @@
  DONE -> 1.Delete Main.storyboard
  DONE -> 2.Add new view controller,then add collection view and set constraints,then add button and its constraints
  DONE -> 3.Refactor home view controller so it is UIViewController and extends UICollectionViewDelegate and UICollectionViewDataSource
- 4.Remove code in home view controller that sets up parts of UI programatically(button etc,background colors of collection view etc etc)
- 5.Do all of UI code in storyboard
+ DONE -> 4.Remove code in home view controller that sets up parts of UI programatically(button etc,background colors of collection view etc etc)
+ DONE -> 5.Do all of UI code in storyboard
  6.Add collection view layout code so it looks like it was before
  */
 
@@ -21,10 +21,6 @@ import MediaPlayer
 
 var padSound = AVAudioPlayer()
 
-
-//class UIViewController: UICollectionViewController {
-
-// Contains data to supply the collectionview
 let dataSource: [String] = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
 
 //made it global
@@ -34,18 +30,14 @@ class ViewController: UIViewController {
 
     @IBOutlet var collectionView: UICollectionView!
   
-    
-    
-// UI ELEMENTS
 
     //Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //only list instructions in viewDidLoad()
         collectionViewUI()
- 
     }
-
     
     // ------ ** ALL SETTINGS RELATED TO THE UI OF THE COLLECTION VIEW ** --
     func collectionViewUI() {
@@ -56,25 +48,21 @@ class ViewController: UIViewController {
 
         collectionView.register(CollectionViewCell.nib(), forCellWithReuseIdentifier: CollectionViewCell.identifier)
         
-        //red background
-        
-        //removed
-        //collectionView.backgroundColor = .red
-        
         /*
         collectionView.register(Header.self,
                                 forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: Header.identifier)
-        
+         */
+    
+        /*
         collectionView.register(Footer.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: Footer.identifier)
         */
-        //add button to collection view
-        //collectionView.addSubview(myButton) // 5/16 (commented out)
         //delegates
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        //let bgColor = #colorLiteral(red: 0.0941, green: 0.0941, blue: 0.0941, alpha: 1) /* #181818 */
-        //collectionView.backgroundColor = bgColor
+        /*let bgColor = #colorLiteral(red: 0.0941, green: 0.0941, blue: 0.0941, alpha: 1) /* #181818 */
+        collectionView.backgroundColor = bgColor
+         */
         //layout - need to fix
         
         view.addSubview(collectionView!)
@@ -90,7 +78,7 @@ class ViewController: UIViewController {
         */
     }
     
-    /*     ---- for now there is no button -------
+
     // button is here
     @IBAction func stopButtonAction(_ sender: UIButton) {
  
@@ -109,12 +97,14 @@ class ViewController: UIViewController {
         }
         //no selector needed because the button was already created on the storyboard
     }
-     */
+
     
-    /* no header or footer for now
+
+    /* REPLACING HEADER/FOOTER FOR UIIMAGEVIEW - I WILL REVISIT THIS DURING IMPROVEMENTS - UPDATES
     //HEADER & FOOTER
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
+        /*
         // FOOTER CODE - DELETE IT?
         if kind == UICollectionView.elementKindSectionFooter {
             //RETURN A FOOTER
@@ -124,16 +114,16 @@ class ViewController: UIViewController {
             
             return footer
         }
+        */
         
         
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: Header.identifier, for: indexPath) as! Header
         
-        header.configure()
-        //header color
-        header.backgroundColor = .black
+        //header.configure()
         return header
     }
-     */ //no header or footer for now
+ */
+
     
     
     
@@ -210,17 +200,19 @@ extension ViewController: UICollectionViewDataSource {
         cell.setup(with: dataSource[indexPath.row])
         cell.noteLabel.font = UIFont(name: "Avenir-Heavy", size: 50)
         
-        //---------- Positioning of noteLabel
+        //---------- Positioning of noteLabel NOTELABEL !!! INSIDE CELL
         let xWidth = cell.noteLabel.frame.width / 8 //moves it to the left
         let yHeight = cell.noteLabel.frame.height / 4
         let width = cell.noteLabel.frame.width
         let height = cell.noteLabel.frame.height
         
         cell.noteLabel.frame = CGRect(x: xWidth, y: yHeight, width: width, height: height)
+         
         //---------- Positioning Code Over
         
         //cell.configure(with: UIImage(named: "")!)
-        cell.configure(with: #imageLiteral(resourceName: "bluebutton"))
+        //cell.configure(with: #imageLiteral(resourceName: "bluebutton"))
+        //cell.defaultAndSelectedBackgroundImages()
         return cell
     }
     

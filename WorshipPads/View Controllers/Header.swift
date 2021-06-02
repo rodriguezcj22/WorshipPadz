@@ -21,7 +21,7 @@ class Header: UICollectionReusableView {
         return headerImage
     }()
  */
-    
+    /*
     private let headerImageView: UIImageView = {
         let headerImage = UIImageView()
         //headerImage.image = #imageLiteral(resourceName: "Header")
@@ -29,9 +29,11 @@ class Header: UICollectionReusableView {
         
         return headerImage
     }()
+ */
+    
 
     public func configure(){
-        addSubview(headerImageView)
+        //addSubview(headerImageView)
         
     }
     
@@ -52,10 +54,11 @@ class Header: UICollectionReusableView {
     override func layoutSubviews() {
         super.layoutSubviews()
         //headerImageView.frame = bounds
-        headerImageView.frame = CGRect(x: 0,
+        /*headerImageView.frame = CGRect(x: 0,
                                        y: 10,
                                        width: 380,
                                        height: 100)
+        */
         //headerImageView.clipsToBounds = true
     }
      
