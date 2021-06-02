@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="91i-WG-vSy">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ba2-lj-lqL">
+            <objects>
+                <viewController id="91i-WG-vSy" customClass="ViewController" customModule="WorshipPads" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uhj-f6-ug4">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="58Z-NN-diP" userLabel="headerView">
+                                <rect key="frame" x="0.0" y="44" width="390" height="91"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header" translatesAutoresizingMaskIntoConstraints="NO" id="r0n-1P-BfN">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="91"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="r0n-1P-BfN" firstAttribute="leading" secondItem="58Z-NN-diP" secondAttribute="leading" id="9Mo-SM-dOU"/>
+                                    <constraint firstItem="r0n-1P-BfN" firstAttribute="top" secondItem="58Z-NN-diP" secondAttribute="top" id="IoA-9R-7vv"/>
+                                    <constraint firstAttribute="bottom" secondItem="r0n-1P-BfN" secondAttribute="bottom" id="NrW-VV-jze"/>
+                                    <constraint firstAttribute="trailing" secondItem="r0n-1P-BfN" secondAttribute="trailing" id="pgR-Xd-e9A"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="e8D-kz-Eg5">
+                                <rect key="frame" x="0.0" y="140" width="390" height="518"/>
+                                <color key="backgroundColor" red="0.094117647058823528" green="0.094117647058823528" blue="0.094117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="itW-Wc-fQw">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="F1l-Xp-upA" customClass="CollectionViewCell" customModule="WorshipPads" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="lax-Q8-kUD">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cp7-2K-pLc">
+                                <rect key="frame" x="31" y="738" width="329" height="31"/>
+                            </slider>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6m5-4L-uuE" userLabel="footerView">
+                                <rect key="frame" x="0.0" y="780" width="390" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered by Javier Melodico" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nka-7B-eEo">
+                                        <rect key="frame" x="89" y="5" width="213" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="nka-7B-eEo" secondAttribute="bottom" constant="4" id="5In-Lh-V5K"/>
+                                    <constraint firstItem="nka-7B-eEo" firstAttribute="top" secondItem="6m5-4L-uuE" secondAttribute="top" constant="5" id="8wt-Cv-ood"/>
+                                    <constraint firstAttribute="trailing" secondItem="nka-7B-eEo" secondAttribute="trailing" constant="88" id="CYb-1E-xXU"/>
+                                    <constraint firstItem="nka-7B-eEo" firstAttribute="leading" secondItem="6m5-4L-uuE" secondAttribute="leading" constant="89" id="l2L-2M-yzE"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mla-ab-JI8">
+                                <rect key="frame" x="127" y="666" width="137" height="67"/>
+                                <state key="normal" image="stopbutton_50"/>
+                                <connections>
+                                    <action selector="stopButtonAction:" destination="91i-WG-vSy" eventType="touchUpInside" id="YO9-GP-0g1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LwQ-Xz-mxh"/>
+                        <color key="backgroundColor" red="0.094117647058823528" green="0.094117647058823528" blue="0.094117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LwQ-Xz-mxh" firstAttribute="bottom" secondItem="6m5-4L-uuE" secondAttribute="bottom" id="24S-eb-oME"/>
+                            <constraint firstItem="LwQ-Xz-mxh" firstAttribute="trailing" secondItem="cp7-2K-pLc" secondAttribute="trailing" constant="32" id="5xe-to-nmB"/>
+                            <constraint firstItem="LwQ-Xz-mxh" firstAttribute="trailing" secondItem="6m5-4L-uuE" secondAttribute="trailing" id="9JK-sv-MdC"/>
+                            <constraint firstItem="LwQ-Xz-mxh" firstAttribute="bottom" secondItem="e8D-kz-Eg5" secondAttribute="bottom" constant="152" id="BNj-qN-5Mn"/>
+                            <constraint firstItem="58Z-NN-diP" firstAttribute="top" secondItem="LwQ-Xz-mxh" secondAttribute="top" id="DsR-13-kA1"/>
+                            <constraint firstItem="mla-ab-JI8" firstAttribute="top" secondItem="e8D-kz-Eg5" secondAttribute="bottom" constant="8" id="L5L-Wm-vTT"/>
+                            <constraint firstItem="6m5-4L-uuE" firstAttribute="top" secondItem="cp7-2K-pLc" secondAttribute="bottom" constant="12" id="Moa-ov-rjx"/>
+                            <constraint firstItem="mla-ab-JI8" firstAttribute="leading" secondItem="LwQ-Xz-mxh" secondAttribute="leading" constant="127" id="NEL-qc-08Y"/>
+                            <constraint firstItem="cp7-2K-pLc" firstAttribute="leading" secondItem="LwQ-Xz-mxh" secondAttribute="leading" constant="33" id="NEq-se-ICU"/>
+                            <constraint firstItem="e8D-kz-Eg5" firstAttribute="leading" secondItem="LwQ-Xz-mxh" secondAttribute="leading" id="Pj9-tb-JWU"/>
+                            <constraint firstItem="LwQ-Xz-mxh" firstAttribute="bottom" secondItem="58Z-NN-diP" secondAttribute="bottom" constant="675" id="SHc-RD-bRx"/>
+                            <constraint firstItem="e8D-kz-Eg5" firstAttribute="top" secondItem="58Z-NN-diP" secondAttribute="bottom" constant="5" id="VuR-xR-8W8"/>
+                            <constraint firstItem="LwQ-Xz-mxh" firstAttribute="bottom" secondItem="mla-ab-JI8" secondAttribute="bottom" constant="77" id="aOG-fM-g7p"/>
+                            <constraint firstItem="LwQ-Xz-mxh" firstAttribute="trailing" secondItem="mla-ab-JI8" secondAttribute="trailing" constant="126" id="cre-YM-rAW"/>
+                            <constraint firstItem="e8D-kz-Eg5" firstAttribute="trailing" secondItem="LwQ-Xz-mxh" secondAttribute="trailing" id="gOw-d3-2MM"/>
+                            <constraint firstItem="58Z-NN-diP" firstAttribute="leading" secondItem="LwQ-Xz-mxh" secondAttribute="leading" id="jKa-5t-6Mb"/>
+                            <constraint firstItem="58Z-NN-diP" firstAttribute="trailing" secondItem="LwQ-Xz-mxh" secondAttribute="trailing" id="mHm-1c-WwP"/>
+                            <constraint firstItem="6m5-4L-uuE" firstAttribute="leading" secondItem="LwQ-Xz-mxh" secondAttribute="leading" id="mNq-Zc-r8y"/>
+                            <constraint firstItem="cp7-2K-pLc" firstAttribute="top" secondItem="mla-ab-JI8" secondAttribute="bottom" constant="5" id="unr-Gt-zjT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="e8D-kz-Eg5" id="3bV-OF-UFH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="98u-M7-ec9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4343.0769230769229" y="493.3649289099526"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="header" width="3765" height="979"/>
+        <image name="stopbutton_50" width="188" height="90"/>
+    </resources>
+</document>

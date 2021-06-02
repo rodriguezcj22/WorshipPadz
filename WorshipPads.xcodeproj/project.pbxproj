@@ -10,7 +10,6 @@
 		1E7B43B0260F569400E05DDC /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7B43AE260F569400E05DDC /* CollectionViewCell.swift */; };
 		1E7B43B1260F569400E05DDC /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E7B43AF260F569400E05DDC /* CollectionViewCell.xib */; };
 		3E1608192614120D0099B1B8 /* Footer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1608182614120D0099B1B8 /* Footer.swift */; };
-		3E160821261573620099B1B8 /* StopBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E160820261573620099B1B8 /* StopBtn.swift */; };
 		3E3F553E25F614FA00E155CF /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3F553D25F614FA00E155CF /* Header.swift */; };
 		3E6C762C2638405A00ADE7D2 /* F#.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3E6C76202638405A00ADE7D2 /* F#.wav */; };
 		3E6C762D2638405A00ADE7D2 /* G#.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3E6C76212638405A00ADE7D2 /* G#.wav */; };
@@ -24,15 +23,14 @@
 		3E6C76352638405A00ADE7D2 /* E.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3E6C76292638405A00ADE7D2 /* E.wav */; };
 		3E6C76362638405A00ADE7D2 /* D.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3E6C762A2638405A00ADE7D2 /* D.wav */; };
 		3E6C76372638405A00ADE7D2 /* D#.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3E6C762B2638405A00ADE7D2 /* D#.wav */; };
+		3E88ECAA265219A700A28D8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E88ECA9265219A700A28D8F /* Main.storyboard */; };
 		3EA8248425F34B7A002EEF2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA8248325F34B7A002EEF2B /* AppDelegate.swift */; };
 		3EA8248625F34B7A002EEF2B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA8248525F34B7A002EEF2B /* SceneDelegate.swift */; };
-		3EA8248B25F34B7A002EEF2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EA8248925F34B7A002EEF2B /* Main.storyboard */; };
 		3EA8248D25F34B7B002EEF2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EA8248C25F34B7B002EEF2B /* Assets.xcassets */; };
 		3EA8249025F34B7B002EEF2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EA8248E25F34B7B002EEF2B /* LaunchScreen.storyboard */; };
 		3EA8249B25F34B7B002EEF2B /* WorshipPadsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA8249A25F34B7B002EEF2B /* WorshipPadsTests.swift */; };
 		3EA824A625F34B7C002EEF2B /* WorshipPadsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA824A525F34B7C002EEF2B /* WorshipPadsUITests.swift */; };
-		3EA824BA25F34C66002EEF2B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA824B925F34C66002EEF2B /* HomeViewController.swift */; };
-		3EC707DB264491660030BCFF /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC707DA264491660030BCFF /* Protocols.swift */; };
+		3EA824BA25F34C66002EEF2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA824B925F34C66002EEF2B /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +54,6 @@
 		1E7B43AE260F569400E05DDC /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		1E7B43AF260F569400E05DDC /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		3E1608182614120D0099B1B8 /* Footer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Footer.swift; sourceTree = "<group>"; };
-		3E160820261573620099B1B8 /* StopBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopBtn.swift; sourceTree = "<group>"; };
 		3E3F553D25F614FA00E155CF /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		3E6C76202638405A00ADE7D2 /* F#.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "F#.wav"; sourceTree = "<group>"; };
 		3E6C76212638405A00ADE7D2 /* G#.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "G#.wav"; sourceTree = "<group>"; };
@@ -70,10 +67,10 @@
 		3E6C76292638405A00ADE7D2 /* E.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = E.wav; sourceTree = "<group>"; };
 		3E6C762A2638405A00ADE7D2 /* D.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = D.wav; sourceTree = "<group>"; };
 		3E6C762B2638405A00ADE7D2 /* D#.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "D#.wav"; sourceTree = "<group>"; };
+		3E88ECA9265219A700A28D8F /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Main.storyboard; path = WorshipPads/Views/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		3EA8248025F34B7A002EEF2B /* WorshipPads.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorshipPads.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA8248325F34B7A002EEF2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EA8248525F34B7A002EEF2B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3EA8248A25F34B7A002EEF2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3EA8248C25F34B7B002EEF2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3EA8248F25F34B7B002EEF2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3EA8249125F34B7B002EEF2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,8 +80,7 @@
 		3EA824A125F34B7C002EEF2B /* WorshipPadsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorshipPadsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA824A525F34B7C002EEF2B /* WorshipPadsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorshipPadsUITests.swift; sourceTree = "<group>"; };
 		3EA824A725F34B7C002EEF2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3EA824B925F34C66002EEF2B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		3EC707DA264491660030BCFF /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		3EA824B925F34C66002EEF2B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +111,7 @@
 		3E508A55264A10D200FCDB4A /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3EA824B925F34C66002EEF2B /* HomeViewController.swift */,
+				3EA824B925F34C66002EEF2B /* ViewController.swift */,
 				3E3F553D25F614FA00E155CF /* Header.swift */,
 				3E1608182614120D0099B1B8 /* Footer.swift */,
 				1E7B43AE260F569400E05DDC /* CollectionViewCell.swift */,
@@ -127,8 +123,6 @@
 		3E508A56264A110800FCDB4A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3EC707DA264491660030BCFF /* Protocols.swift */,
-				3E160820261573620099B1B8 /* StopBtn.swift */,
 				3EA8248325F34B7A002EEF2B /* AppDelegate.swift */,
 				3EA8248C25F34B7B002EEF2B /* Assets.xcassets */,
 				3E6C761F2638405A00ADE7D2 /* Pads */,
@@ -150,7 +144,7 @@
 		3E508A58264A11D600FCDB4A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3EA8248925F34B7A002EEF2B /* Main.storyboard */,
+				3E88ECA9265219A700A28D8F /* Main.storyboard */,
 				3EA8248E25F34B7B002EEF2B /* LaunchScreen.storyboard */,
 			);
 			path = Views;
@@ -337,8 +331,8 @@
 				3E6C762D2638405A00ADE7D2 /* G#.wav in Resources */,
 				3E6C76372638405A00ADE7D2 /* D#.wav in Resources */,
 				1E7B43B1260F569400E05DDC /* CollectionViewCell.xib in Resources */,
+				3E88ECAA265219A700A28D8F /* Main.storyboard in Resources */,
 				3EA8248D25F34B7B002EEF2B /* Assets.xcassets in Resources */,
-				3EA8248B25F34B7A002EEF2B /* Main.storyboard in Resources */,
 				3E6C76362638405A00ADE7D2 /* D.wav in Resources */,
 				3E6C76352638405A00ADE7D2 /* E.wav in Resources */,
 				3E6C76342638405A00ADE7D2 /* G.wav in Resources */,
@@ -368,10 +362,8 @@
 			files = (
 				3E1608192614120D0099B1B8 /* Footer.swift in Sources */,
 				1E7B43B0260F569400E05DDC /* CollectionViewCell.swift in Sources */,
-				3EA824BA25F34C66002EEF2B /* HomeViewController.swift in Sources */,
-				3EC707DB264491660030BCFF /* Protocols.swift in Sources */,
+				3EA824BA25F34C66002EEF2B /* ViewController.swift in Sources */,
 				3EA8248425F34B7A002EEF2B /* AppDelegate.swift in Sources */,
-				3E160821261573620099B1B8 /* StopBtn.swift in Sources */,
 				3E3F553E25F614FA00E155CF /* Header.swift in Sources */,
 				3EA8248625F34B7A002EEF2B /* SceneDelegate.swift in Sources */,
 			);
@@ -409,14 +401,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3EA8248925F34B7A002EEF2B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3EA8248A25F34B7A002EEF2B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3EA8248E25F34B7B002EEF2B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
