@@ -57,7 +57,9 @@ class ViewController: UIViewController {
         collectionView.register(CollectionViewCell.nib(), forCellWithReuseIdentifier: CollectionViewCell.identifier)
         
         //red background
-        collectionView.backgroundColor = .red
+        
+        //removed
+        //collectionView.backgroundColor = .red
         
         /*
         collectionView.register(Header.self,
@@ -140,6 +142,9 @@ class ViewController: UIViewController {
     //SELECTING A CELL
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        
+        //this cell needs to be green, because it's the one that was selected
+        
         //collectionView.deselectItem(at: indexPath, animated: true)
         
         //study this line
@@ -147,7 +152,9 @@ class ViewController: UIViewController {
         
     //most likely will need to delete
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
-
+        
+        //cell.defaultAndSelectedBackgroundImages() 6/1
+        
         //AUDIO CODE: - Assigns audio file to padSound variable. Catches any errors.
         do {
             padSound = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "\(String(dataSource[indexPath.row]))", ofType: "wav")!))
@@ -178,8 +185,6 @@ class ViewController: UIViewController {
          cell.configure(with: UIImage(named: "image")!)
          return cell
      }
-     
-     
  }
  
  */
@@ -203,12 +208,29 @@ extension ViewController: UICollectionViewDataSource {
         //ADVISE: CHECK HOW GUARD WORKS IN COLLECTIONVIEWCELLS
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
         cell.setup(with: dataSource[indexPath.row])
-        cell.noteLabel.font = UIFont(name: "Avenir-Heavy", size: 35)
-        //cell.frame = CGRect(x: 10, y: 10, width: 150, height: 150)
+        cell.noteLabel.font = UIFont(name: "Avenir-Heavy", size: 50)
+        
+        //---------- Positioning of noteLabel
+        let xWidth = cell.noteLabel.frame.width / 8 //moves it to the left
+        let yHeight = cell.noteLabel.frame.height / 4
+        let width = cell.noteLabel.frame.width
+        let height = cell.noteLabel.frame.height
+        
+        cell.noteLabel.frame = CGRect(x: xWidth, y: yHeight, width: width, height: height)
+        //---------- Positioning Code Over
+        
         //cell.configure(with: UIImage(named: "")!)
-        cell.configure(with: #imageLiteral(resourceName: "bluebutton")) // works !
+        cell.configure(with: #imageLiteral(resourceName: "bluebutton"))
         return cell
     }
+    
+    //selected cell
+        //code goes here
+    
+    
+    //deselected cell
+        //code goes here
+    
 }
 
 
@@ -226,8 +248,12 @@ extension ViewController: UICollectionViewDataSource {
 extension ViewController: UICollectionViewDelegateFlowLayout {
     //margin and padding between each cell
     
+    //this line was overriding the collection view cells !!!!
+    
+    /*
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 150, height: 150)
     }
+    */
     
 }

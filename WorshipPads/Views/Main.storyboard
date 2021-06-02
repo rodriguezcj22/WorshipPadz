@@ -18,8 +18,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="e8D-kz-Eg5">
-                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="0.0" y="44" width="390" height="566"/>
+                                <color key="backgroundColor" red="0.6147992015" green="0.1060865745" blue="0.100103341" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="itW-Wc-fQw">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -41,10 +41,10 @@
                         <viewLayoutGuide key="safeArea" id="LwQ-Xz-mxh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="e8D-kz-Eg5" firstAttribute="leading" secondItem="LwQ-Xz-mxh" secondAttribute="leading" id="3rK-Rf-dqh"/>
-                            <constraint firstItem="LwQ-Xz-mxh" firstAttribute="bottom" secondItem="e8D-kz-Eg5" secondAttribute="bottom" id="ITW-2x-kmG"/>
-                            <constraint firstItem="LwQ-Xz-mxh" firstAttribute="trailing" secondItem="e8D-kz-Eg5" secondAttribute="trailing" id="euR-oh-y1K"/>
-                            <constraint firstItem="e8D-kz-Eg5" firstAttribute="top" secondItem="LwQ-Xz-mxh" secondAttribute="top" id="kZl-Ka-CL6"/>
+                            <constraint firstItem="e8D-kz-Eg5" firstAttribute="leading" secondItem="LwQ-Xz-mxh" secondAttribute="leading" id="6zQ-Pj-hue"/>
+                            <constraint firstItem="LwQ-Xz-mxh" firstAttribute="bottom" secondItem="e8D-kz-Eg5" secondAttribute="bottom" constant="200" id="B76-wi-ASr"/>
+                            <constraint firstItem="e8D-kz-Eg5" firstAttribute="trailing" secondItem="LwQ-Xz-mxh" secondAttribute="trailing" id="U77-GN-UvG"/>
+                            <constraint firstItem="e8D-kz-Eg5" firstAttribute="top" secondItem="LwQ-Xz-mxh" secondAttribute="top" id="lMs-HG-4Ht"/>
                         </constraints>
                     </view>
                     <connections>
@@ -53,7 +53,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="98u-M7-ec9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4343" y="494"/>
+            <point key="canvasLocation" x="-4343.0769230769229" y="493.3649289099526"/>
         </scene>
     </scenes>
     <resources>
