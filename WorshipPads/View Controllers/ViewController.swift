@@ -20,6 +20,7 @@ import AVFoundation
 import MediaPlayer
 
 var padSound = AVAudioPlayer()
+//hackingwithswift: var bombSoundEffect: AVAudioPlayer?
 
 let dataSource: [String] = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
 
@@ -30,7 +31,6 @@ class ViewController: UIViewController {
 
     @IBOutlet var collectionView: UICollectionView!
   
-
     //Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,44 +48,36 @@ class ViewController: UIViewController {
 
         collectionView.register(CollectionViewCell.nib(), forCellWithReuseIdentifier: CollectionViewCell.identifier)
         
-        /*
-        collectionView.register(Header.self,
-                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: Header.identifier)
-         */
-    
-        /*
-        collectionView.register(Footer.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: Footer.identifier)
-        */
         //delegates
         collectionView.delegate = self
         collectionView.dataSource = self
-        
-        /*let bgColor = #colorLiteral(red: 0.0941, green: 0.0941, blue: 0.0941, alpha: 1) /* #181818 */
-        collectionView.backgroundColor = bgColor
-         */
-        //layout - need to fix
-        
+  
         view.addSubview(collectionView!)
-
     }
     
     
-    @IBAction func volumeView(_ sender: UISlider!) {
-        /*
-        let volumeView = MPVolumeView(frame: CGRect(x: 20, y: 705, width: 360, height: 30))
-        //add volumeView to collectionView
-        collectionView.addSubview(volumeView)
-        */
-    }
+
     
 
+    
+    
+    
+    //bool flag
+    var stopBtnWasPressed: Bool = false
+    
+    
     // button is here
     @IBAction func stopButtonAction(_ sender: UIButton) {
  
-        print("Button tapped")
+        guard indexPathTracker != nil else {
+                print("Cell was not selected. indexPathTracker = empty! ")
+                return
+        }
+        print("indexPathTracker was NOT empty ! ")
+        
         
         let ip = IndexPath(item: indexPathTracker!, section: 0)
-        
+
         self.collectionView.deselectItem(at: ip, animated: true)
         indexPathTracker = nil
         
@@ -93,37 +85,87 @@ class ViewController: UIViewController {
         
         //print(" CONTROL CELL VALUE ON BTN CLICK----", self.controlCell)
         if padSound.isPlaying {
-            padSound.setVolume(0, fadeDuration: 3)
-        }
-        //no selector needed because the button was already created on the storyboard
-    }
 
-    
-
-    /* REPLACING HEADER/FOOTER FOR UIIMAGEVIEW - I WILL REVISIT THIS DURING IMPROVEMENTS - UPDATES
-    //HEADER & FOOTER
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        
-        /*
-        // FOOTER CODE - DELETE IT?
-        if kind == UICollectionView.elementKindSectionFooter {
-            //RETURN A FOOTER
-            let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: Footer.identifier, for: indexPath) as! Footer
-            footer.configure()
-            footer.backgroundColor = .darkGray
+            padSound.fadeOut()
             
-            return footer
         }
-        */
-        
-        
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: Header.identifier, for: indexPath) as! Header
-        
-        //header.configure()
-        return header
     }
- */
+    
+    
+    
+    
+    
+    
+    
+ 
+    
+    
+    
+    
+    
+    //SLIDER:
+    
+    //initialize a sliderValue tracker (not nil, won't crash, right?)
+    
+    //var sliderValue: Float = 0.8000000
+    
+/*
+    
+    @IBAction func volumeSlider(_ sender: UISlider!) {
 
+        //track the current slider value
+        sliderValue = sender.value
+        
+        padSound.volume = sender.value
+        print("VolumeView: ", sender.value)
+        
+        
+
+        
+        //if stop button was pressed
+        /*
+         Set a boolean flag to true inside levelOneCompleted():
+
+         var isLevelOneCompleted = false
+
+         func levelOneCompleted(){
+             // do things...
+             isLevelOneCompleted = true
+         }
+         And later...
+
+         if isLevelOneCompleted {
+             //do this
+         } else {
+             //do this
+         }
+         */
+        
+        if stopBtnWasPressed {
+            
+            
+        }
+        
+        //sender.isHidden = false
+        
+        //if isLevelOneCompleted //set the bool flag back 0
+        //check for some condition, or wait some time and then execute
+        //stopBtnWasPressed = false
+        
+        print("the code executed passed the if statement")
+        
+        
+        
+    }
+    
+    
+*/
+    
+    
+    
+    
+    
+    
     
     
     
@@ -131,61 +173,29 @@ class ViewController: UIViewController {
     
     //SELECTING A CELL
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        
-        //this cell needs to be green, because it's the one that was selected
-        
-        //collectionView.deselectItem(at: indexPath, animated: true)
-        
+
         //study this line
         indexPathTracker = indexPath.row
         
     //most likely will need to delete
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
-        
-        //cell.defaultAndSelectedBackgroundImages() 6/1
-        
+
         //AUDIO CODE: - Assigns audio file to padSound variable. Catches any errors.
         do {
             padSound = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "\(String(dataSource[indexPath.row]))", ofType: "wav")!))
-            //this does not actually play the sound? it just assigns it to padSound
+                //this does not actually play the sound? it just assigns it to padSound
+            
+            //slider
+            //padSound.volume = sliderValue
         }catch {
             Swift.print(error)
         }
         padSound.play()
         //Debugs
         print("Selected Note: \(dataSource[indexPath.row])")
+        //study line above
     }
-    
-    
 }
-
-
-
-/*
- extension ViewController: UICollectionViewDataSource {
-     
-     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-         return 12
-     }
-     
-     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyCollectionViewCell.identifier, for: indexPath) as! MyCollectionViewCell
-         
-         cell.configure(with: UIImage(named: "image")!)
-         return cell
-     }
- }
- 
- */
-
-
-
-
-
-
-
-
 
 
 /* --------------- MAY 31st WORKING AREA --------------------*/
@@ -209,32 +219,10 @@ extension ViewController: UICollectionViewDataSource {
         cell.noteLabel.frame = CGRect(x: xWidth, y: yHeight, width: width, height: height)
          
         //---------- Positioning Code Over
-        
-        //cell.configure(with: UIImage(named: "")!)
-        //cell.configure(with: #imageLiteral(resourceName: "bluebutton"))
-        //cell.defaultAndSelectedBackgroundImages()
+
         return cell
     }
-    
-    //selected cell
-        //code goes here
-    
-    
-    //deselected cell
-        //code goes here
-    
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 extension ViewController: UICollectionViewDelegateFlowLayout {
@@ -249,3 +237,26 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
     */
     
 }
+
+//first try it as is
+//if doesn't work, try: pad.volume() >
+extension AVAudioPlayer {
+    @objc func fadeOut() {
+        if volume > 0.1 {
+            
+            //disable the slider, then fade
+            //how do I disable the fader?
+            //bring the "volumeSlider" here somewhow
+            
+            // Fade
+            volume -= 0.1
+            perform(#selector(fadeOut), with: nil, afterDelay: 0.3)
+        } else {
+            // Stop and get the sound ready for playing again
+            stop()
+            prepareToPlay()
+            volume = 1
+        }
+    }
+}
+
