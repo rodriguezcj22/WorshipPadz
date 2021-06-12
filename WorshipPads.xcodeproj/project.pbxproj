@@ -11,62 +11,43 @@
 		1E7B43B1260F569400E05DDC /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E7B43AF260F569400E05DDC /* CollectionViewCell.xib */; };
 		3E1608192614120D0099B1B8 /* Footer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1608182614120D0099B1B8 /* Footer.swift */; };
 		3E3F553E25F614FA00E155CF /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3F553D25F614FA00E155CF /* Header.swift */; };
-		3E80DEC42672CA6B00B7B0FA /* F#.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3E80DEB82672CA6B00B7B0FA /* F#.wav */; };
-		3E80DEC52672CA6B00B7B0FA /* G#.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3E80DEB92672CA6B00B7B0FA /* G#.wav */; };
-		3E80DEC62672CA6B00B7B0FA /* A#.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3E80DEBA2672CA6B00B7B0FA /* A#.wav */; };
-		3E80DEC72672CA6B00B7B0FA /* A.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3E80DEBB2672CA6B00B7B0FA /* A.wav */; };
-		3E80DEC82672CA6B00B7B0FA /* C.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3E80DEBC2672CA6B00B7B0FA /* C.wav */; };
-		3E80DEC92672CA6B00B7B0FA /* B.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3E80DEBD2672CA6B00B7B0FA /* B.wav */; };
-		3E80DECA2672CA6B00B7B0FA /* F.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3E80DEBE2672CA6B00B7B0FA /* F.wav */; };
-		3E80DECB2672CA6B00B7B0FA /* C#.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3E80DEBF2672CA6B00B7B0FA /* C#.wav */; };
-		3E80DECC2672CA6B00B7B0FA /* G.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3E80DEC02672CA6B00B7B0FA /* G.wav */; };
-		3E80DECD2672CA6B00B7B0FA /* E.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3E80DEC12672CA6B00B7B0FA /* E.wav */; };
-		3E80DECE2672CA6B00B7B0FA /* D.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3E80DEC22672CA6B00B7B0FA /* D.wav */; };
-		3E80DECF2672CA6B00B7B0FA /* D#.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3E80DEC32672CA6B00B7B0FA /* D#.wav */; };
+		3E80DEF62673BFBF00B7B0FA /* A.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3E80DEEA2673BFBF00B7B0FA /* A.mp3 */; };
+		3E80DEF72673BFBF00B7B0FA /* B.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3E80DEEB2673BFBF00B7B0FA /* B.mp3 */; };
+		3E80DEF82673BFBF00B7B0FA /* C.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3E80DEEC2673BFBF00B7B0FA /* C.mp3 */; };
+		3E80DEF92673BFBF00B7B0FA /* C#.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3E80DEED2673BFBF00B7B0FA /* C#.mp3 */; };
+		3E80DEFA2673BFBF00B7B0FA /* G.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3E80DEEE2673BFBF00B7B0FA /* G.mp3 */; };
+		3E80DEFB2673BFBF00B7B0FA /* F.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3E80DEEF2673BFBF00B7B0FA /* F.mp3 */; };
+		3E80DEFC2673BFBF00B7B0FA /* D.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3E80DEF02673BFBF00B7B0FA /* D.mp3 */; };
+		3E80DEFD2673BFBF00B7B0FA /* E.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3E80DEF12673BFBF00B7B0FA /* E.mp3 */; };
+		3E80DEFE2673BFBF00B7B0FA /* D#.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3E80DEF22673BFBF00B7B0FA /* D#.mp3 */; };
+		3E80DEFF2673BFBF00B7B0FA /* F#.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3E80DEF32673BFBF00B7B0FA /* F#.mp3 */; };
+		3E80DF002673BFBF00B7B0FA /* G#.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3E80DEF42673BFBF00B7B0FA /* G#.mp3 */; };
+		3E80DF012673BFBF00B7B0FA /* A#.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3E80DEF52673BFBF00B7B0FA /* A#.mp3 */; };
 		3E88ECAA265219A700A28D8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E88ECA9265219A700A28D8F /* Main.storyboard */; };
 		3EA8248425F34B7A002EEF2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA8248325F34B7A002EEF2B /* AppDelegate.swift */; };
 		3EA8248625F34B7A002EEF2B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA8248525F34B7A002EEF2B /* SceneDelegate.swift */; };
 		3EA8248D25F34B7B002EEF2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EA8248C25F34B7B002EEF2B /* Assets.xcassets */; };
 		3EA8249025F34B7B002EEF2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EA8248E25F34B7B002EEF2B /* LaunchScreen.storyboard */; };
-		3EA8249B25F34B7B002EEF2B /* WorshipPadsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA8249A25F34B7B002EEF2B /* WorshipPadsTests.swift */; };
-		3EA824A625F34B7C002EEF2B /* WorshipPadsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA824A525F34B7C002EEF2B /* WorshipPadsUITests.swift */; };
 		3EA824BA25F34C66002EEF2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA824B925F34C66002EEF2B /* ViewController.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		3EA8249725F34B7B002EEF2B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3EA8247825F34B7A002EEF2B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3EA8247F25F34B7A002EEF2B;
-			remoteInfo = WorshipPads;
-		};
-		3EA824A225F34B7C002EEF2B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3EA8247825F34B7A002EEF2B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3EA8247F25F34B7A002EEF2B;
-			remoteInfo = WorshipPads;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1E7B43AE260F569400E05DDC /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		1E7B43AF260F569400E05DDC /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		3E1608182614120D0099B1B8 /* Footer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Footer.swift; sourceTree = "<group>"; };
 		3E3F553D25F614FA00E155CF /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
-		3E80DEB82672CA6B00B7B0FA /* F#.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "F#.wav"; sourceTree = "<group>"; };
-		3E80DEB92672CA6B00B7B0FA /* G#.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "G#.wav"; sourceTree = "<group>"; };
-		3E80DEBA2672CA6B00B7B0FA /* A#.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "A#.wav"; sourceTree = "<group>"; };
-		3E80DEBB2672CA6B00B7B0FA /* A.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = A.wav; sourceTree = "<group>"; };
-		3E80DEBC2672CA6B00B7B0FA /* C.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = C.wav; sourceTree = "<group>"; };
-		3E80DEBD2672CA6B00B7B0FA /* B.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = B.wav; sourceTree = "<group>"; };
-		3E80DEBE2672CA6B00B7B0FA /* F.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = F.wav; sourceTree = "<group>"; };
-		3E80DEBF2672CA6B00B7B0FA /* C#.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "C#.wav"; sourceTree = "<group>"; };
-		3E80DEC02672CA6B00B7B0FA /* G.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = G.wav; sourceTree = "<group>"; };
-		3E80DEC12672CA6B00B7B0FA /* E.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = E.wav; sourceTree = "<group>"; };
-		3E80DEC22672CA6B00B7B0FA /* D.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = D.wav; sourceTree = "<group>"; };
-		3E80DEC32672CA6B00B7B0FA /* D#.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "D#.wav"; sourceTree = "<group>"; };
+		3E80DEEA2673BFBF00B7B0FA /* A.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = A.mp3; sourceTree = "<group>"; };
+		3E80DEEB2673BFBF00B7B0FA /* B.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = B.mp3; sourceTree = "<group>"; };
+		3E80DEEC2673BFBF00B7B0FA /* C.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = C.mp3; sourceTree = "<group>"; };
+		3E80DEED2673BFBF00B7B0FA /* C#.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "C#.mp3"; sourceTree = "<group>"; };
+		3E80DEEE2673BFBF00B7B0FA /* G.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = G.mp3; sourceTree = "<group>"; };
+		3E80DEEF2673BFBF00B7B0FA /* F.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = F.mp3; sourceTree = "<group>"; };
+		3E80DEF02673BFBF00B7B0FA /* D.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = D.mp3; sourceTree = "<group>"; };
+		3E80DEF12673BFBF00B7B0FA /* E.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = E.mp3; sourceTree = "<group>"; };
+		3E80DEF22673BFBF00B7B0FA /* D#.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "D#.mp3"; sourceTree = "<group>"; };
+		3E80DEF32673BFBF00B7B0FA /* F#.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "F#.mp3"; sourceTree = "<group>"; };
+		3E80DEF42673BFBF00B7B0FA /* G#.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "G#.mp3"; sourceTree = "<group>"; };
+		3E80DEF52673BFBF00B7B0FA /* A#.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "A#.mp3"; sourceTree = "<group>"; };
 		3E88ECA9265219A700A28D8F /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Main.storyboard; path = WorshipPads/Views/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		3EA8248025F34B7A002EEF2B /* WorshipPads.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorshipPads.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA8248325F34B7A002EEF2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,31 +55,11 @@
 		3EA8248C25F34B7B002EEF2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3EA8248F25F34B7B002EEF2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3EA8249125F34B7B002EEF2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3EA8249625F34B7B002EEF2B /* WorshipPadsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorshipPadsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3EA8249A25F34B7B002EEF2B /* WorshipPadsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorshipPadsTests.swift; sourceTree = "<group>"; };
-		3EA8249C25F34B7B002EEF2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3EA824A125F34B7C002EEF2B /* WorshipPadsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorshipPadsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3EA824A525F34B7C002EEF2B /* WorshipPadsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorshipPadsUITests.swift; sourceTree = "<group>"; };
-		3EA824A725F34B7C002EEF2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3EA824B925F34C66002EEF2B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3EA8247D25F34B7A002EEF2B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3EA8249325F34B7B002EEF2B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3EA8249E25F34B7C002EEF2B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -123,7 +84,7 @@
 		3E508A56264A110800FCDB4A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3E80DEB72672CA6B00B7B0FA /* Worship Pads JM */,
+				3E80DEE92673BFBF00B7B0FA /* mp3s */,
 				3EA8248325F34B7A002EEF2B /* AppDelegate.swift */,
 				3EA8248C25F34B7B002EEF2B /* Assets.xcassets */,
 				3E508A57264A111600FCDB4A /* Other */,
@@ -136,7 +97,6 @@
 			children = (
 				3EA8248525F34B7A002EEF2B /* SceneDelegate.swift */,
 				3EA8248125F34B7A002EEF2B /* Products */,
-				3EA824A425F34B7C002EEF2B /* WorshipPadsUITests */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -150,23 +110,23 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		3E80DEB72672CA6B00B7B0FA /* Worship Pads JM */ = {
+		3E80DEE92673BFBF00B7B0FA /* mp3s */ = {
 			isa = PBXGroup;
 			children = (
-				3E80DEB82672CA6B00B7B0FA /* F#.wav */,
-				3E80DEB92672CA6B00B7B0FA /* G#.wav */,
-				3E80DEBA2672CA6B00B7B0FA /* A#.wav */,
-				3E80DEBB2672CA6B00B7B0FA /* A.wav */,
-				3E80DEBC2672CA6B00B7B0FA /* C.wav */,
-				3E80DEBD2672CA6B00B7B0FA /* B.wav */,
-				3E80DEBE2672CA6B00B7B0FA /* F.wav */,
-				3E80DEBF2672CA6B00B7B0FA /* C#.wav */,
-				3E80DEC02672CA6B00B7B0FA /* G.wav */,
-				3E80DEC12672CA6B00B7B0FA /* E.wav */,
-				3E80DEC22672CA6B00B7B0FA /* D.wav */,
-				3E80DEC32672CA6B00B7B0FA /* D#.wav */,
+				3E80DEEA2673BFBF00B7B0FA /* A.mp3 */,
+				3E80DEEB2673BFBF00B7B0FA /* B.mp3 */,
+				3E80DEEC2673BFBF00B7B0FA /* C.mp3 */,
+				3E80DEED2673BFBF00B7B0FA /* C#.mp3 */,
+				3E80DEEE2673BFBF00B7B0FA /* G.mp3 */,
+				3E80DEEF2673BFBF00B7B0FA /* F.mp3 */,
+				3E80DEF02673BFBF00B7B0FA /* D.mp3 */,
+				3E80DEF12673BFBF00B7B0FA /* E.mp3 */,
+				3E80DEF22673BFBF00B7B0FA /* D#.mp3 */,
+				3E80DEF32673BFBF00B7B0FA /* F#.mp3 */,
+				3E80DEF42673BFBF00B7B0FA /* G#.mp3 */,
+				3E80DEF52673BFBF00B7B0FA /* A#.mp3 */,
 			);
-			path = "Worship Pads JM";
+			path = mp3s;
 			sourceTree = "<group>";
 		};
 		3EA8247725F34B7A002EEF2B = {
@@ -180,8 +140,6 @@
 			isa = PBXGroup;
 			children = (
 				3EA8248025F34B7A002EEF2B /* WorshipPads.app */,
-				3EA8249625F34B7B002EEF2B /* WorshipPadsTests.xctest */,
-				3EA824A125F34B7C002EEF2B /* WorshipPadsUITests.xctest */,
 			);
 			name = Products;
 			path = ../../..;
@@ -196,25 +154,6 @@
 				3EA8249125F34B7B002EEF2B /* Info.plist */,
 			);
 			path = WorshipPads;
-			sourceTree = "<group>";
-		};
-		3EA8249925F34B7B002EEF2B /* WorshipPadsTests */ = {
-			isa = PBXGroup;
-			children = (
-				3EA8249A25F34B7B002EEF2B /* WorshipPadsTests.swift */,
-				3EA8249C25F34B7B002EEF2B /* Info.plist */,
-			);
-			path = WorshipPadsTests;
-			sourceTree = "<group>";
-		};
-		3EA824A425F34B7C002EEF2B /* WorshipPadsUITests */ = {
-			isa = PBXGroup;
-			children = (
-				3EA8249925F34B7B002EEF2B /* WorshipPadsTests */,
-				3EA824A525F34B7C002EEF2B /* WorshipPadsUITests.swift */,
-				3EA824A725F34B7C002EEF2B /* Info.plist */,
-			);
-			path = WorshipPadsUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,42 +176,6 @@
 			productReference = 3EA8248025F34B7A002EEF2B /* WorshipPads.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3EA8249525F34B7B002EEF2B /* WorshipPadsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3EA824AD25F34B7C002EEF2B /* Build configuration list for PBXNativeTarget "WorshipPadsTests" */;
-			buildPhases = (
-				3EA8249225F34B7B002EEF2B /* Sources */,
-				3EA8249325F34B7B002EEF2B /* Frameworks */,
-				3EA8249425F34B7B002EEF2B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3EA8249825F34B7B002EEF2B /* PBXTargetDependency */,
-			);
-			name = WorshipPadsTests;
-			productName = WorshipPadsTests;
-			productReference = 3EA8249625F34B7B002EEF2B /* WorshipPadsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		3EA824A025F34B7C002EEF2B /* WorshipPadsUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3EA824B025F34B7C002EEF2B /* Build configuration list for PBXNativeTarget "WorshipPadsUITests" */;
-			buildPhases = (
-				3EA8249D25F34B7C002EEF2B /* Sources */,
-				3EA8249E25F34B7C002EEF2B /* Frameworks */,
-				3EA8249F25F34B7C002EEF2B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3EA824A325F34B7C002EEF2B /* PBXTargetDependency */,
-			);
-			name = WorshipPadsUITests;
-			productName = WorshipPadsUITests;
-			productReference = 3EA824A125F34B7C002EEF2B /* WorshipPadsUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -284,14 +187,6 @@
 				TargetAttributes = {
 					3EA8247F25F34B7A002EEF2B = {
 						CreatedOnToolsVersion = 12.4;
-					};
-					3EA8249525F34B7B002EEF2B = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = 3EA8247F25F34B7A002EEF2B;
-					};
-					3EA824A025F34B7C002EEF2B = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = 3EA8247F25F34B7A002EEF2B;
 					};
 				};
 			};
@@ -309,8 +204,6 @@
 			projectRoot = "";
 			targets = (
 				3EA8247F25F34B7A002EEF2B /* WorshipPads */,
-				3EA8249525F34B7B002EEF2B /* WorshipPadsTests */,
-				3EA824A025F34B7C002EEF2B /* WorshipPadsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -320,36 +213,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E80DECA2672CA6B00B7B0FA /* F.wav in Resources */,
-				3E80DEC42672CA6B00B7B0FA /* F#.wav in Resources */,
-				3E80DEC92672CA6B00B7B0FA /* B.wav in Resources */,
-				3E80DEC62672CA6B00B7B0FA /* A#.wav in Resources */,
-				3E80DECB2672CA6B00B7B0FA /* C#.wav in Resources */,
-				3E80DEC72672CA6B00B7B0FA /* A.wav in Resources */,
-				3E80DEC82672CA6B00B7B0FA /* C.wav in Resources */,
+				3E80DF012673BFBF00B7B0FA /* A#.mp3 in Resources */,
+				3E80DEFE2673BFBF00B7B0FA /* D#.mp3 in Resources */,
+				3E80DEFD2673BFBF00B7B0FA /* E.mp3 in Resources */,
+				3E80DEF72673BFBF00B7B0FA /* B.mp3 in Resources */,
 				3EA8249025F34B7B002EEF2B /* LaunchScreen.storyboard in Resources */,
-				3E80DEC52672CA6B00B7B0FA /* G#.wav in Resources */,
-				3E80DECF2672CA6B00B7B0FA /* D#.wav in Resources */,
+				3E80DEF82673BFBF00B7B0FA /* C.mp3 in Resources */,
+				3E80DEF92673BFBF00B7B0FA /* C#.mp3 in Resources */,
+				3E80DEFF2673BFBF00B7B0FA /* F#.mp3 in Resources */,
+				3E80DEFB2673BFBF00B7B0FA /* F.mp3 in Resources */,
+				3E80DEFA2673BFBF00B7B0FA /* G.mp3 in Resources */,
+				3E80DEF62673BFBF00B7B0FA /* A.mp3 in Resources */,
+				3E80DEFC2673BFBF00B7B0FA /* D.mp3 in Resources */,
 				1E7B43B1260F569400E05DDC /* CollectionViewCell.xib in Resources */,
 				3E88ECAA265219A700A28D8F /* Main.storyboard in Resources */,
 				3EA8248D25F34B7B002EEF2B /* Assets.xcassets in Resources */,
-				3E80DECE2672CA6B00B7B0FA /* D.wav in Resources */,
-				3E80DECD2672CA6B00B7B0FA /* E.wav in Resources */,
-				3E80DECC2672CA6B00B7B0FA /* G.wav in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3EA8249425F34B7B002EEF2B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3EA8249F25F34B7C002EEF2B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				3E80DF002673BFBF00B7B0FA /* G#.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,36 +248,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3EA8249225F34B7B002EEF2B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3EA8249B25F34B7B002EEF2B /* WorshipPadsTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3EA8249D25F34B7C002EEF2B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3EA824A625F34B7C002EEF2B /* WorshipPadsUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		3EA8249825F34B7B002EEF2B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3EA8247F25F34B7A002EEF2B /* WorshipPads */;
-			targetProxy = 3EA8249725F34B7B002EEF2B /* PBXContainerItemProxy */;
-		};
-		3EA824A325F34B7C002EEF2B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3EA8247F25F34B7A002EEF2B /* WorshipPads */;
-			targetProxy = 3EA824A225F34B7C002EEF2B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3EA8248E25F34B7B002EEF2B /* LaunchScreen.storyboard */ = {
@@ -566,90 +416,6 @@
 			};
 			name = Release;
 		};
-		3EA824AE25F34B7C002EEF2B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7S2C6KTLS6;
-				INFOPLIST_FILE = WorshipPadsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = JMcompany.WorshipPadsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorshipPads.app/WorshipPads";
-			};
-			name = Debug;
-		};
-		3EA824AF25F34B7C002EEF2B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7S2C6KTLS6;
-				INFOPLIST_FILE = WorshipPadsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = JMcompany.WorshipPadsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorshipPads.app/WorshipPads";
-			};
-			name = Release;
-		};
-		3EA824B125F34B7C002EEF2B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7S2C6KTLS6;
-				INFOPLIST_FILE = WorshipPadsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = JMcompany.WorshipPadsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = WorshipPads;
-			};
-			name = Debug;
-		};
-		3EA824B225F34B7C002EEF2B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7S2C6KTLS6;
-				INFOPLIST_FILE = WorshipPadsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = JMcompany.WorshipPadsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = WorshipPads;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -667,24 +433,6 @@
 			buildConfigurations = (
 				3EA824AB25F34B7C002EEF2B /* Debug */,
 				3EA824AC25F34B7C002EEF2B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3EA824AD25F34B7C002EEF2B /* Build configuration list for PBXNativeTarget "WorshipPadsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3EA824AE25F34B7C002EEF2B /* Debug */,
-				3EA824AF25F34B7C002EEF2B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3EA824B025F34B7C002EEF2B /* Build configuration list for PBXNativeTarget "WorshipPadsUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3EA824B125F34B7C002EEF2B /* Debug */,
-				3EA824B225F34B7C002EEF2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
