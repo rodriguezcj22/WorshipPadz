@@ -162,38 +162,38 @@ class ViewController: UIViewController {
 */
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    //SELECTING A CELL
+
+    //SPEED DEBUGGING HERE !!!!!!!: SELECTING A CELL
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
 
         //study this line
         indexPathTracker = indexPath.row
-        
-    //most likely will need to delete
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
 
         //AUDIO CODE: - Assigns audio file to padSound variable. Catches any errors.
         do {
-            padSound = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "\(String(dataSource[indexPath.row]))", ofType: "wav")!))
-                //this does not actually play the sound? it just assigns it to padSound
             
-            //slider
-            //padSound.volume = sliderValue
+            padSound = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "\(String(dataSource[indexPath.row]))", ofType: "mp3")!))
+            
+            //was missing this line
+            padSound.prepareToPlay() //needed?
+            
+            //backgrounPlay
+            
+            var audioSession = AVAudioSession.sharedInstance()
+            do {
+                try audioSession.setCategory(AVAudioSession.Category.playback)
+            } catch {
+                
+            }
         }catch {
             Swift.print(error)
         }
         padSound.play()
+        padSound.numberOfLoops = -1
+        
         //Debugs
-        print("Selected Note: \(dataSource[indexPath.row])")
-        //study line above
+        //print("Selected Note: \(dataSource[indexPath.row])")
     }
 }
 
