@@ -49,7 +49,7 @@
 		3E80DEF42673BFBF00B7B0FA /* G#.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "G#.mp3"; sourceTree = "<group>"; };
 		3E80DEF52673BFBF00B7B0FA /* A#.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "A#.mp3"; sourceTree = "<group>"; };
 		3E88ECA9265219A700A28D8F /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Main.storyboard; path = WorshipPads/Views/Main.storyboard; sourceTree = SOURCE_ROOT; };
-		3EA8248025F34B7A002EEF2B /* WorshipPads.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorshipPads.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EA8248025F34B7A002EEF2B /* WorshipPadz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorshipPadz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA8248325F34B7A002EEF2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EA8248525F34B7A002EEF2B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3EA8248C25F34B7B002EEF2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -139,7 +139,7 @@
 		3EA8248125F34B7A002EEF2B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3EA8248025F34B7A002EEF2B /* WorshipPads.app */,
+				3EA8248025F34B7A002EEF2B /* WorshipPadz.app */,
 			);
 			name = Products;
 			path = ../../..;
@@ -159,9 +159,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3EA8247F25F34B7A002EEF2B /* WorshipPads */ = {
+		3EA8247F25F34B7A002EEF2B /* WorshipPadz */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3EA824AA25F34B7C002EEF2B /* Build configuration list for PBXNativeTarget "WorshipPads" */;
+			buildConfigurationList = 3EA824AA25F34B7C002EEF2B /* Build configuration list for PBXNativeTarget "WorshipPadz" */;
 			buildPhases = (
 				3EA8247C25F34B7A002EEF2B /* Sources */,
 				3EA8247D25F34B7A002EEF2B /* Frameworks */,
@@ -171,9 +171,9 @@
 			);
 			dependencies = (
 			);
-			name = WorshipPads;
+			name = WorshipPadz;
 			productName = WorshipPads;
-			productReference = 3EA8248025F34B7A002EEF2B /* WorshipPads.app */;
+			productReference = 3EA8248025F34B7A002EEF2B /* WorshipPadz.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -190,7 +190,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3EA8247B25F34B7A002EEF2B /* Build configuration list for PBXProject "WorshipPads" */;
+			buildConfigurationList = 3EA8247B25F34B7A002EEF2B /* Build configuration list for PBXProject "WorshipPadz" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -203,7 +203,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3EA8247F25F34B7A002EEF2B /* WorshipPads */,
+				3EA8247F25F34B7A002EEF2B /* WorshipPadz */,
 			);
 		};
 /* End PBXProject section */
@@ -419,7 +419,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3EA8247B25F34B7A002EEF2B /* Build configuration list for PBXProject "WorshipPads" */ = {
+		3EA8247B25F34B7A002EEF2B /* Build configuration list for PBXProject "WorshipPadz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3EA824A825F34B7C002EEF2B /* Debug */,
@@ -428,7 +428,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3EA824AA25F34B7C002EEF2B /* Build configuration list for PBXNativeTarget "WorshipPads" */ = {
+		3EA824AA25F34B7C002EEF2B /* Build configuration list for PBXNativeTarget "WorshipPadz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3EA824AB25F34B7C002EEF2B /* Debug */,
