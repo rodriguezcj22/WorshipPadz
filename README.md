@@ -1,4 +1,4 @@
-# WorshipPads
+# WorshipPadz
 Worship Padz is an app that plays background pads for live worship musicians!
  
 Incorporating our app makes your rig extremely light, specially when traveling from gig to gig. 
