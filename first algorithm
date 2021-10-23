@@ -1,0 +1,12 @@
+If an algorithm is a set of steps we can carry out ourselves,
+programming is the activity by which we write down the steps in the notation that the computer understands.
+
+Euclid's algorithm
+a = q x b + r
+
+  a    q    b    r
+ 136   2    56   24
+ 56    2    24   8
+ 24    3    8    0
+ 
+ Challenge: Do this algorithm with emojis.
