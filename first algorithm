@@ -10,3 +10,36 @@ a = q x b + r
  24    3    8    0
  
  Challenge: Do this algorithm with emojis.
+
+
+import UIKit
+
+/*
+Euclid's algorithm
+a = q x b + r
+ 
+ a = total number of objects
+ q = quotient
+ b = either onsets or silents depending on which one is greater
+ r = remainder
+ 
+  a    q    b    r
+ 136   2    56   24
+ 56    2    24   8
+ 24    3    8    0
+ */
+
+var a = 136
+var b = 56
+var q = a/b
+var r = a % b
+
+    a = q * b + r
+
+     if r == 0 {
+         print("Stop here. The greater common divisor of a and b is B.")
+     } else {
+         print("a: \(a = b)")
+         print("b: \(b = r)")
+         print("a = q * b + r: \( a = q * b + r)")
+    }
