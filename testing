@@ -1,0 +1,51 @@
+import UIKit
+
+/*
+ 
+ 1st Algorithm
+ 
+Euclid's algorithm
+a = q x b + r
+ 
+ a = total number of objects
+ q = quotient
+ b = either onsets or silents depending on which one is greater
+ r = remainder
+ 
+  a    q    b    r
+ 136   2    56   24
+ 56    2    24   8
+ 24    3    8    0
+ */
+
+//step 1
+var a = 136
+var b = 56
+var q = a/b
+var r = a % b
+var max = 3
+
+var i = 0
+var euclidsAlgorithm: [Int] = [a, q, b, r]
+var arraySize = euclidsAlgorithm.count
+
+while i < arraySize {
+    if i == 0 {
+        print(euclidsAlgorithm[0], euclidsAlgorithm[1], euclidsAlgorithm[2], euclidsAlgorithm[3])
+        i += 1
+    } else{
+        if r == 0 {
+            print("")
+            print("Stop. The greatest common divisor of a and b is \(b).")
+            i = euclidsAlgorithm.count //because you want the while loop to stop
+        } else {
+            a = b
+            b = r
+            q = a/b
+            r = a % b
+            
+            print("\(a), \(q), \(b), \(r)")
+       }
+    }
+}
+
